@@ -33,8 +33,11 @@ export const appRouter = router({
           email: z.string().email("Valid email is required"),
           propertyAddress: z.string().min(5, "Property address is required"),
           city: z.string().optional(),
-          referralSource: z.string().optional(),
-          message: z.string().optional(),
+          referralSource: z.string().min(1, "Please tell us how you heard about us"),
+          reasonForSelling: z.string().optional(),
+          timing: z.string().optional(),
+          condition: z.string().optional(),
+          message: z.string().min(1, "Please tell us about your property"),
         })
       )
       .mutation(async ({ input }) => {
@@ -45,6 +48,9 @@ export const appRouter = router({
           propertyAddress: input.propertyAddress,
           city: input.city || null,
           referralSource: input.referralSource || null,
+          reasonForSelling: input.reasonForSelling || null,
+          timing: input.timing || null,
+          condition: input.condition || null,
           message: input.message || null,
         };
         await createLead(leadData);

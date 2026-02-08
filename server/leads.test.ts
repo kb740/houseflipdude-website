@@ -13,7 +13,10 @@ vi.mock("./db", () => ({
       email: "test@example.com",
       propertyAddress: "123 Main St, San Francisco, CA 94102",
       city: "San Francisco",
-      referralSource: "Google",
+      referralSource: "google",
+      reasonForSelling: "inherited",
+      timing: "immediately",
+      condition: "needs_everything",
       message: "Need to sell fast",
       status: "new",
       notes: null,
@@ -28,7 +31,10 @@ vi.mock("./db", () => ({
     email: "test@example.com",
     propertyAddress: "123 Main St, San Francisco, CA 94102",
     city: "San Francisco",
-    referralSource: "Google",
+    referralSource: "google",
+    reasonForSelling: "inherited",
+    timing: "immediately",
+    condition: "needs_everything",
     message: "Need to sell fast",
     status: "new",
     notes: null,
@@ -113,7 +119,7 @@ describe("leads.submit", () => {
     vi.clearAllMocks();
   });
 
-  it("accepts a valid lead submission from public user", async () => {
+  it("accepts a valid lead submission with all fields", async () => {
     const ctx = createPublicContext();
     const caller = appRouter.createCaller(ctx);
 
@@ -122,14 +128,17 @@ describe("leads.submit", () => {
       phone: "4155551234",
       propertyAddress: "456 Oak Ave, Oakland, CA 94607",
       email: "jane@example.com",
-      referralSource: "Google",
+      referralSource: "google",
+      reasonForSelling: "inherited",
+      timing: "immediately",
+      condition: "needs_everything",
       message: "Inherited house, need to sell",
     });
 
     expect(result).toEqual({ success: true });
   });
 
-  it("accepts a lead with minimal required fields (including email)", async () => {
+  it("accepts a lead with only required fields", async () => {
     const ctx = createPublicContext();
     const caller = appRouter.createCaller(ctx);
 
@@ -138,6 +147,8 @@ describe("leads.submit", () => {
       phone: "5105551234",
       propertyAddress: "789 Elm St, San Jose, CA 95112",
       email: "john@example.com",
+      referralSource: "facebook",
+      message: "Want to sell my property",
     });
 
     expect(result).toEqual({ success: true });
@@ -152,6 +163,9 @@ describe("leads.submit", () => {
         fullName: "",
         phone: "4155551234",
         propertyAddress: "123 Main St, SF, CA 94102",
+        email: "test@example.com",
+        referralSource: "google",
+        message: "Need to sell",
       })
     ).rejects.toThrow();
   });
@@ -165,6 +179,9 @@ describe("leads.submit", () => {
         fullName: "Jane Doe",
         phone: "",
         propertyAddress: "123 Main St, SF, CA 94102",
+        email: "test@example.com",
+        referralSource: "google",
+        message: "Need to sell",
       })
     ).rejects.toThrow();
   });
@@ -178,6 +195,9 @@ describe("leads.submit", () => {
         fullName: "Jane Doe",
         phone: "4155551234",
         propertyAddress: "",
+        email: "test@example.com",
+        referralSource: "google",
+        message: "Need to sell",
       })
     ).rejects.toThrow();
   });
@@ -192,6 +212,8 @@ describe("leads.submit", () => {
         phone: "4155551234",
         propertyAddress: "123 Main St, SF, CA 94102",
         email: "",
+        referralSource: "google",
+        message: "Need to sell",
       })
     ).rejects.toThrow();
   });
@@ -206,6 +228,8 @@ describe("leads.submit", () => {
         phone: "4155551234",
         propertyAddress: "123 Main St, SF, CA 94102",
         email: "not-an-email",
+        referralSource: "google",
+        message: "Need to sell",
       })
     ).rejects.toThrow();
   });
@@ -219,8 +243,77 @@ describe("leads.submit", () => {
         fullName: "Jane Doe",
         phone: "4155551234",
         propertyAddress: "123 Main St, SF, CA 94102",
+        referralSource: "google",
+        message: "Need to sell",
+      } as any)
+    ).rejects.toThrow();
+  });
+
+  it("rejects a lead with missing referralSource", async () => {
+    const ctx = createPublicContext();
+    const caller = appRouter.createCaller(ctx);
+
+    await expect(
+      caller.leads.submit({
+        fullName: "Jane Doe",
+        phone: "4155551234",
+        propertyAddress: "123 Main St, SF, CA 94102",
+        email: "jane@example.com",
+        referralSource: "",
+        message: "Need to sell",
       })
     ).rejects.toThrow();
+  });
+
+  it("rejects a lead with missing message", async () => {
+    const ctx = createPublicContext();
+    const caller = appRouter.createCaller(ctx);
+
+    await expect(
+      caller.leads.submit({
+        fullName: "Jane Doe",
+        phone: "4155551234",
+        propertyAddress: "123 Main St, SF, CA 94102",
+        email: "jane@example.com",
+        referralSource: "google",
+        message: "",
+      })
+    ).rejects.toThrow();
+  });
+
+  it("accepts a lead without optional dropdown fields", async () => {
+    const ctx = createPublicContext();
+    const caller = appRouter.createCaller(ctx);
+
+    const result = await caller.leads.submit({
+      fullName: "Bob Builder",
+      phone: "9255551234",
+      propertyAddress: "100 Main St, Walnut Creek, CA 94596",
+      email: "bob@example.com",
+      referralSource: "referral",
+      message: "Looking to sell my fixer upper",
+    });
+
+    expect(result).toEqual({ success: true });
+  });
+
+  it("accepts a lead with all optional dropdown fields", async () => {
+    const ctx = createPublicContext();
+    const caller = appRouter.createCaller(ctx);
+
+    const result = await caller.leads.submit({
+      fullName: "Alice Wonder",
+      phone: "5105559876",
+      propertyAddress: "200 Oak Blvd, Berkeley, CA 94704",
+      email: "alice@example.com",
+      referralSource: "mailer",
+      reasonForSelling: "foreclosure",
+      timing: "30-60_days",
+      condition: "somewhat_dated",
+      message: "Facing foreclosure, need help selling quickly",
+    });
+
+    expect(result).toEqual({ success: true });
   });
 });
 

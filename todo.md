@@ -45,3 +45,12 @@
 - [x] Fix: pages don't scroll to top when navigating via nav links
 - [ ] Fix: email notifications not being sent to kb@houseflipdude.com on lead submission
 - [x] Make email field mandatory with proper format validation in lead capture form
+- [x] Make "How did you hear about us?" field mandatory in lead capture form
+- [x] Make "Tell us about your property" field mandatory in lead capture form
+- [x] Change Your Name placeholder from "Kelly Beardslee" to "First Last"
+- [x] Change Phone Number placeholder from "(415) 555-1234" to "925-555-1234"
+- [x] Add "Reason for Selling" dropdown with common quick-sale reasons
+- [x] Add "Timing" dropdown (Immediately, 15-30 Days, 30-60 Days, Other)
+- [x] Add "Condition" dropdown (Needs Everything, Somewhat Dated, Decent, Good, Great, Other)
+- [x] Update backend schema/validation for new required fields and dropdowns
+- [x] Update tests for new form fields

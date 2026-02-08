@@ -12,6 +12,9 @@ function formatLeadNotification(lead: {
   email?: string | null;
   city?: string | null;
   referralSource?: string | null;
+  reasonForSelling?: string | null;
+  timing?: string | null;
+  condition?: string | null;
   message?: string | null;
 }): { title: string; content: string } {
   const timestamp = new Date().toLocaleString("en-US", {
@@ -31,6 +34,9 @@ function formatLeadNotification(lead: {
     `Property Address: ${lead.propertyAddress}`,
     `City: ${lead.city || "Not specified"}`,
     `Referral Source: ${lead.referralSource || "Not specified"}`,
+    `Reason for Selling: ${lead.reasonForSelling || "Not specified"}`,
+    `Timing: ${lead.timing || "Not specified"}`,
+    `Condition: ${lead.condition || "Not specified"}`,
     ``,
     `Message: ${lead.message || "No additional details provided"}`,
     ``,
@@ -90,6 +96,9 @@ export async function notifyNewLead(lead: {
   email?: string | null;
   city?: string | null;
   referralSource?: string | null;
+  reasonForSelling?: string | null;
+  timing?: string | null;
+  condition?: string | null;
   message?: string | null;
 }): Promise<void> {
   try {

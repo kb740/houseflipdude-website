@@ -22,6 +22,9 @@ export default function LeadCaptureForm({ variant = "hero", className = "" }: Le
     email: "",
     propertyAddress: "",
     referralSource: "",
+    reasonForSelling: "",
+    timing: "",
+    condition: "",
     message: "",
   });
 
@@ -44,6 +47,14 @@ export default function LeadCaptureForm({ variant = "hero", className = "" }: Le
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(form.email)) {
       toast.error("Please enter a valid email address.");
+      return;
+    }
+    if (!form.referralSource) {
+      toast.error("Please tell us how you heard about us.");
+      return;
+    }
+    if (!form.message) {
+      toast.error("Please tell us about your property.");
       return;
     }
     mutation.mutate(form);
@@ -70,7 +81,7 @@ export default function LeadCaptureForm({ variant = "hero", className = "" }: Le
           <Label htmlFor="fullName" className="text-sm font-medium">Your Name *</Label>
           <Input
             id="fullName"
-            placeholder="Kelly Beardslee"
+            placeholder="First Last"
             value={form.fullName}
             onChange={e => setForm(f => ({ ...f, fullName: e.target.value }))}
             required
@@ -82,7 +93,7 @@ export default function LeadCaptureForm({ variant = "hero", className = "" }: Le
           <Input
             id="phone"
             type="tel"
-            placeholder="(415) 555-1234"
+            placeholder="925-555-1234"
             value={form.phone}
             onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
             required
@@ -117,7 +128,7 @@ export default function LeadCaptureForm({ variant = "hero", className = "" }: Le
           />
         </div>
         <div className="space-y-1.5">
-          <Label htmlFor="referralSource" className="text-sm font-medium">How did you hear about us?</Label>
+          <Label htmlFor="referralSource" className="text-sm font-medium">How did you hear about us? *</Label>
           <Select value={form.referralSource} onValueChange={v => setForm(f => ({ ...f, referralSource: v }))}>
             <SelectTrigger className="bg-background">
               <SelectValue placeholder="Select one" />
@@ -133,21 +144,74 @@ export default function LeadCaptureForm({ variant = "hero", className = "" }: Le
             </SelectContent>
           </Select>
         </div>
+        <div className="space-y-1.5">
+          <Label htmlFor="reasonForSelling" className="text-sm font-medium">Reason for Selling</Label>
+          <Select value={form.reasonForSelling} onValueChange={v => setForm(f => ({ ...f, reasonForSelling: v }))}>
+            <SelectTrigger className="bg-background">
+              <SelectValue placeholder="Select a reason" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="inherited">Inherited Property</SelectItem>
+              <SelectItem value="divorce">Divorce / Separation</SelectItem>
+              <SelectItem value="foreclosure">Facing Foreclosure</SelectItem>
+              <SelectItem value="relocation">Job Relocation / Moving</SelectItem>
+              <SelectItem value="downsizing">Downsizing</SelectItem>
+              <SelectItem value="financial">Financial Hardship</SelectItem>
+              <SelectItem value="repairs">Too Many Repairs Needed</SelectItem>
+              <SelectItem value="tired_landlord">Tired Landlord</SelectItem>
+              <SelectItem value="vacant">Vacant Property</SelectItem>
+              <SelectItem value="behind_taxes">Behind on Taxes</SelectItem>
+              <SelectItem value="estate">Estate / Probate Sale</SelectItem>
+              <SelectItem value="upgrading">Upgrading to New Home</SelectItem>
+              <SelectItem value="code_violations">Code Violations</SelectItem>
+              <SelectItem value="other">Other</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+        <div className="space-y-1.5">
+          <Label htmlFor="timing" className="text-sm font-medium">Timing</Label>
+          <Select value={form.timing} onValueChange={v => setForm(f => ({ ...f, timing: v }))}>
+            <SelectTrigger className="bg-background">
+              <SelectValue placeholder="When do you need to sell?" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="immediately">Immediately</SelectItem>
+              <SelectItem value="15-30_days">15-30 Days</SelectItem>
+              <SelectItem value="30-60_days">30-60 Days</SelectItem>
+              <SelectItem value="other">Other</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+        <div className="space-y-1.5">
+          <Label htmlFor="condition" className="text-sm font-medium">Condition</Label>
+          <Select value={form.condition} onValueChange={v => setForm(f => ({ ...f, condition: v }))}>
+            <SelectTrigger className="bg-background">
+              <SelectValue placeholder="Property condition" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="needs_everything">Needs Everything</SelectItem>
+              <SelectItem value="somewhat_dated">Somewhat Dated</SelectItem>
+              <SelectItem value="decent">Decent</SelectItem>
+              <SelectItem value="good">Good</SelectItem>
+              <SelectItem value="great">Great</SelectItem>
+              <SelectItem value="other">Other</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
       </div>
 
-      {!isCompact && (
-        <div className="space-y-1.5">
-          <Label htmlFor="message" className="text-sm font-medium">Tell us about your property (optional)</Label>
-          <Textarea
-            id="message"
-            placeholder="Condition, timeline, any details that help us get you the best offers..."
-            value={form.message}
-            onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
-            rows={3}
-            className="bg-background"
-          />
-        </div>
-      )}
+      <div className="space-y-1.5">
+        <Label htmlFor="message" className="text-sm font-medium">Tell us about your property *</Label>
+        <Textarea
+          id="message"
+          placeholder="Condition, timeline, any details that help us get you the best offers..."
+          value={form.message}
+          onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
+          rows={3}
+          required
+          className="bg-background"
+        />
+      </div>
 
       <Button
         type="submit"
