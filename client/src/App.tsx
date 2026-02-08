@@ -1,7 +1,8 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
+import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import SiteLayout from "./components/SiteLayout";
@@ -17,9 +18,18 @@ import Contact from "./pages/Contact";
 import AdminLeads from "./pages/AdminLeads";
 import SchemaMarkup from "./components/SchemaMarkup";
 
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0 });
+  }, [location]);
+  return null;
+}
+
 function Router() {
   return (
     <SiteLayout>
+      <ScrollToTop />
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/how-it-works" component={HowItWorks} />

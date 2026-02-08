@@ -42,3 +42,4 @@
 - [x] Change 9 Bay Area Counties to 14 Greater Bay Area Counties throughout
 - [x] Change $200M+ In Transactions to $450M+ throughout
 - [x] Update schema markup with new counties and updated references
+- [x] Fix: pages don't scroll to top when navigating via nav links
