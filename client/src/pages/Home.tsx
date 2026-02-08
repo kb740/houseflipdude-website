@@ -10,7 +10,7 @@ const BITMOJI_URL = "https://files.manuscdn.com/user_upload_by_module/session_fi
 
 const stats = [
   { value: "20+", label: "Years Experience" },
-  { value: "500+", label: "Houses Purchased" },
+  { value: "1,000+", label: "Houses Purchased" },
   { value: "$200M+", label: "In Transactions" },
   { value: "9", label: "Bay Area Counties" },
 ];
@@ -167,7 +167,7 @@ export default function Home() {
                 and a network of investors ready to pay top dollar.
               </p>
               <div className="flex flex-wrap gap-3 mt-6">
-                {["Licensed CA Broker — DRE# 01205925", "20+ Years Experience", "500+ Homes Purchased"].map(tag => (
+                {["Licensed CA Broker — DRE# 01205925", "20+ Years Experience", "1,000+ Homes Purchased"].map(tag => (
                   <span key={tag} className="inline-flex items-center gap-1.5 bg-accent text-accent-foreground rounded-full px-3 py-1 text-sm font-medium">
                     <CheckCircle className="w-3.5 h-3.5" /> {tag}
                   </span>

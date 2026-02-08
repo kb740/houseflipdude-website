@@ -34,3 +34,4 @@
 - [x] Design jumbo postcard (6x9) for direct mail
 - [x] Fix Google Places address autocomplete not showing suggestions when typing (routed through server-side tRPC)
 - [x] Update phone number from (555) 123-4567 to (415) 686-2846 throughout the site
+- [x] Change 500+ houses purchased to 1,000+ in all locations (Home page stats, Home page tag, About page)

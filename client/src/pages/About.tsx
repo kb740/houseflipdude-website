@@ -56,7 +56,7 @@ export default function About() {
                   <div className="text-xs text-muted-foreground">Years Experience</div>
                 </div>
                 <div className="bg-card rounded-xl border border-border p-4 text-center">
-                  <div className="text-2xl font-extrabold text-primary">500+</div>
+                  <div className="text-2xl font-extrabold text-primary">1,000+</div>
                   <div className="text-xs text-muted-foreground">Houses Purchased</div>
                 </div>
                 <div className="bg-card rounded-xl border border-border p-4 text-center">
