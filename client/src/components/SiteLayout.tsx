@@ -43,8 +43,8 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             <a href="mailto:kb@houseflipdude.com" className="flex items-center gap-1 hover:underline">
               <Mail className="w-3 h-3" /> <span className="hidden sm:inline">kb@houseflipdude.com</span>
             </a>
-            <a href="tel:+15551234567" className="flex items-center gap-1 hover:underline">
-              <Phone className="w-3 h-3" /> <span>(555) 123-4567</span>
+            <a href="tel:+14156862846" className="flex items-center gap-1 hover:underline">
+              <Phone className="w-3 h-3" /> <span>(415) 686-2846</span>
             </a>
           </div>
         </div>
@@ -155,8 +155,8 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             <div>
               <h4 className="font-semibold text-background mb-4 text-sm uppercase tracking-wider">Contact Us</h4>
               <div className="flex flex-col gap-3 text-sm text-background/60">
-                <a href="tel:+15551234567" className="flex items-center gap-2 hover:text-primary transition-colors">
-                  <Phone className="w-4 h-4" /> (555) 123-4567
+                <a href="tel:+14156862846" className="flex items-center gap-2 hover:text-primary transition-colors">
+                  <Phone className="w-4 h-4" /> (415) 686-2846
                 </a>
                 <a href="mailto:kb@houseflipdude.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                   <Mail className="w-4 h-4" /> kb@houseflipdude.com
