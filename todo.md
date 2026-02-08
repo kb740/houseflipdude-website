@@ -22,3 +22,6 @@
 - [x] robots.txt and sitemap setup
 - [x] Trust signals: investor network stats, experience highlights
 - [x] Lead management: admin view for tracking form submissions
+- [x] Email notification to KB@ironhorsere.com on lead submission (via built-in owner notification)
+- [ ] SMS text notification to 415-686-2846 on lead submission
+- [ ] Google Sheets logging of leads on form submission

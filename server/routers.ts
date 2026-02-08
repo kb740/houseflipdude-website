@@ -5,6 +5,7 @@ import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { createLead, getLeads, getLeadById, updateLeadStatus, createContactMessage, getContactMessages } from "./db";
 import { TRPCError } from "@trpc/server";
+import { notifyNewLead, notifyNewContact } from "./notifications";
 
 const adminProcedure = protectedProcedure.use(({ ctx, next }) => {
   if (ctx.user.role !== "admin") throw new TRPCError({ code: "FORBIDDEN" });
@@ -36,7 +37,7 @@ export const appRouter = router({
         })
       )
       .mutation(async ({ input }) => {
-        await createLead({
+        const leadData = {
           fullName: input.fullName,
           phone: input.phone,
           email: input.email || null,
@@ -44,7 +45,10 @@ export const appRouter = router({
           city: input.city || null,
           referralSource: input.referralSource || null,
           message: input.message || null,
-        });
+        };
+        await createLead(leadData);
+        // Fire-and-forget notification — don't block the response
+        notifyNewLead(leadData).catch(() => {});
         return { success: true };
       }),
 
@@ -86,13 +90,16 @@ export const appRouter = router({
         })
       )
       .mutation(async ({ input }) => {
-        await createContactMessage({
+        const contactData = {
           fullName: input.fullName,
           email: input.email,
           phone: input.phone || null,
           subject: input.subject || null,
           message: input.message,
-        });
+        };
+        await createContactMessage(contactData);
+        // Fire-and-forget notification — don't block the response
+        notifyNewContact(contactData).catch(() => {});
         return { success: true };
       }),
 
