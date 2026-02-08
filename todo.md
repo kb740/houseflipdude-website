@@ -1,0 +1,24 @@
+# HouseFlipDude Project TODO
+
+- [x] Database schema for leads (name, phone, address, email, referral source, timestamps)
+- [x] tRPC routes for lead submission and retrieval
+- [x] Design system: color palette, typography, global styles (teal/ocean blue, warm accents)
+- [x] Site layout with navigation (Home, How It Works, About, Reviews, Service Areas, Blog, Contact)
+- [x] Home page hero section with "Investors Compete for Your House" messaging
+- [x] Lead capture form (name, phone, address, email, referral source) with "Get My Offers" CTA
+- [x] How It Works page (3-step process: Submit Info → Investors Compete → Close on Your Timeline)
+- [x] About page featuring Kelly Beardslee / HouseFlipDude brand story
+- [x] Video placeholder sections (hero, About, How It Works)
+- [x] Reviews/Testimonials section with placeholder customer quotes and ratings
+- [x] Service Area pages for 9 Bay Area counties + Sacramento + Central Valley
+- [x] City-specific SEO content and local keywords on each service area page
+- [x] Blog section with SEO-focused placeholder articles
+- [x] Contact page with phone, email (kb@houseflipdude.com), and contact form
+- [x] Case study placeholder sections
+- [x] Bitmoji/avatar integration in appropriate places
+- [x] Schema markup for local business, reviews, and FAQs
+- [x] SEO meta tags, title tags, and Open Graph tags on all pages
+- [x] Mobile-responsive design optimized for all screen sizes
+- [x] robots.txt and sitemap setup
+- [x] Trust signals: investor network stats, experience highlights
+- [x] Lead management: admin view for tracking form submissions

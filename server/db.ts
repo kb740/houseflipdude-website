@@ -1,11 +1,10 @@
-import { eq } from "drizzle-orm";
+import { desc, eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, users, leads, InsertLead, Lead, contactMessages, InsertContactMessage } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
-// Lazily create the drizzle instance so local tooling can run without a DB.
 export async function getDb() {
   if (!_db && process.env.DATABASE_URL) {
     try {
@@ -85,8 +84,48 @@ export async function getUserByOpenId(openId: string) {
   }
 
   const result = await db.select().from(users).where(eq(users.openId, openId)).limit(1);
-
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+// --- Lead helpers ---
+
+export async function createLead(lead: InsertLead): Promise<void> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.insert(leads).values(lead);
+}
+
+export async function getLeads(): Promise<Lead[]> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.select().from(leads).orderBy(desc(leads.createdAt));
+}
+
+export async function getLeadById(id: number): Promise<Lead | undefined> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.select().from(leads).where(eq(leads.id, id)).limit(1);
+  return result[0];
+}
+
+export async function updateLeadStatus(id: number, status: Lead["status"], notes?: string): Promise<void> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const updateData: Record<string, unknown> = { status };
+  if (notes !== undefined) updateData.notes = notes;
+  await db.update(leads).set(updateData).where(eq(leads.id, id));
+}
+
+// --- Contact message helpers ---
+
+export async function createContactMessage(msg: InsertContactMessage): Promise<void> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.insert(contactMessages).values(msg);
+}
+
+export async function getContactMessages() {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.select().from(contactMessages).orderBy(desc(contactMessages.createdAt));
+}

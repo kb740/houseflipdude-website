@@ -1,5 +1,20 @@
 {
   "version": "7",
   "dialect": "mysql",
-  "entries": []
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1770557863862,
+      "tag": "0000_worried_the_renegades",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1770561794001,
+      "tag": "0001_new_cerebro",
+      "breakpoints": true
+    }
+  ]
 }
