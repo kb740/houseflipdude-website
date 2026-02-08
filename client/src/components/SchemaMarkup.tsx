@@ -12,7 +12,12 @@ const localBusinessSchema = {
   "founder": {
     "@type": "Person",
     "name": "Kelly Beardslee",
-    "jobTitle": "Licensed Real Estate Broker"
+    "jobTitle": "Licensed Real Estate Broker",
+    "identifier": {
+      "@type": "PropertyValue",
+      "name": "California DRE License",
+      "value": "01205925"
+    }
   },
   "areaServed": [
     { "@type": "City", "name": "San Francisco", "containedInPlace": { "@type": "State", "name": "California" } },

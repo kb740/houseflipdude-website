@@ -162,7 +162,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
                   <Mail className="w-4 h-4" /> kb@houseflipdude.com
                 </a>
                 <p className="text-background/40 mt-2 text-xs">Licensed California Real Estate Broker</p>
-                <p className="text-background/40 text-xs">DRE# [Your License Number]</p>
+                <p className="text-background/40 text-xs">DRE# 01205925</p>
               </div>
             </div>
           </div>

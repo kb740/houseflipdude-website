@@ -25,3 +25,4 @@
 - [x] Email notification to KB@ironhorsere.com on lead submission (via built-in owner notification)
 - [ ] SMS text notification to 415-686-2846 on lead submission
 - [ ] Google Sheets logging of leads on form submission
+- [x] Add DRE license # 01205925 throughout the site (footer, About page, Home page, schema markup)
