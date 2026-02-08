@@ -129,7 +129,7 @@ describe("leads.submit", () => {
     expect(result).toEqual({ success: true });
   });
 
-  it("accepts a lead with minimal required fields", async () => {
+  it("accepts a lead with minimal required fields (including email)", async () => {
     const ctx = createPublicContext();
     const caller = appRouter.createCaller(ctx);
 
@@ -137,6 +137,7 @@ describe("leads.submit", () => {
       fullName: "John Smith",
       phone: "5105551234",
       propertyAddress: "789 Elm St, San Jose, CA 95112",
+      email: "john@example.com",
     });
 
     expect(result).toEqual({ success: true });
@@ -181,18 +182,45 @@ describe("leads.submit", () => {
     ).rejects.toThrow();
   });
 
-  it("accepts a lead with empty email string", async () => {
+  it("rejects a lead with empty email string", async () => {
     const ctx = createPublicContext();
     const caller = appRouter.createCaller(ctx);
 
-    const result = await caller.leads.submit({
-      fullName: "Jane Doe",
-      phone: "4155551234",
-      propertyAddress: "123 Main St, SF, CA 94102",
-      email: "",
-    });
+    await expect(
+      caller.leads.submit({
+        fullName: "Jane Doe",
+        phone: "4155551234",
+        propertyAddress: "123 Main St, SF, CA 94102",
+        email: "",
+      })
+    ).rejects.toThrow();
+  });
 
-    expect(result).toEqual({ success: true });
+  it("rejects a lead with invalid email format", async () => {
+    const ctx = createPublicContext();
+    const caller = appRouter.createCaller(ctx);
+
+    await expect(
+      caller.leads.submit({
+        fullName: "Jane Doe",
+        phone: "4155551234",
+        propertyAddress: "123 Main St, SF, CA 94102",
+        email: "not-an-email",
+      })
+    ).rejects.toThrow();
+  });
+
+  it("rejects a lead with missing email", async () => {
+    const ctx = createPublicContext();
+    const caller = appRouter.createCaller(ctx);
+
+    await expect(
+      caller.leads.submit({
+        fullName: "Jane Doe",
+        phone: "4155551234",
+        propertyAddress: "123 Main St, SF, CA 94102",
+      })
+    ).rejects.toThrow();
   });
 });
 

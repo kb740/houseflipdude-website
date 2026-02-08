@@ -43,3 +43,5 @@
 - [x] Change $200M+ In Transactions to $450M+ throughout
 - [x] Update schema markup with new counties and updated references
 - [x] Fix: pages don't scroll to top when navigating via nav links
+- [ ] Fix: email notifications not being sent to kb@houseflipdude.com on lead submission
+- [x] Make email field mandatory with proper format validation in lead capture form

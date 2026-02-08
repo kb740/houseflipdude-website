@@ -37,8 +37,13 @@ export default function LeadCaptureForm({ variant = "hero", className = "" }: Le
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.fullName || !form.phone || !form.propertyAddress) {
-      toast.error("Please fill in your name, phone, and property address.");
+    if (!form.fullName || !form.phone || !form.propertyAddress || !form.email) {
+      toast.error("Please fill in your name, phone, property address, and email.");
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      toast.error("Please enter a valid email address.");
       return;
     }
     mutation.mutate(form);
@@ -100,13 +105,14 @@ export default function LeadCaptureForm({ variant = "hero", className = "" }: Le
           </div>
         </div>
         <div className="space-y-1.5">
-          <Label htmlFor="email" className="text-sm font-medium">Email (optional)</Label>
+          <Label htmlFor="email" className="text-sm font-medium">Email *</Label>
           <Input
             id="email"
             type="email"
             placeholder="you@email.com"
             value={form.email}
             onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
+            required
             className="bg-background"
           />
         </div>

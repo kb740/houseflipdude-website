@@ -30,7 +30,7 @@ export const appRouter = router({
         z.object({
           fullName: z.string().min(1, "Name is required"),
           phone: z.string().min(7, "Phone number is required"),
-          email: z.string().email().optional().or(z.literal("")),
+          email: z.string().email("Valid email is required"),
           propertyAddress: z.string().min(5, "Property address is required"),
           city: z.string().optional(),
           referralSource: z.string().optional(),
