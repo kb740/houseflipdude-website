@@ -16,6 +16,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import AdminLeads from "./pages/AdminLeads";
+import WhatIsWholesaler from "./pages/WhatIsWholesaler";
 import SchemaMarkup from "./components/SchemaMarkup";
 
 function ScrollToTop() {
@@ -37,6 +38,7 @@ function Router() {
         <Route path="/reviews" component={Reviews} />
         <Route path="/service-areas" component={ServiceAreas} />
         <Route path="/service-areas/:slug" component={ServiceAreaDetail} />
+        <Route path="/what-is-a-wholesaler" component={WhatIsWholesaler} />
         <Route path="/blog" component={Blog} />
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/contact" component={Contact} />

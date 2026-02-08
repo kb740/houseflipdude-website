@@ -13,6 +13,14 @@ interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    slug: "real-estate-wholesalers-bay-area-what-homeowners-should-know",
+    title: "Real Estate Wholesalers in the Bay Area: What Homeowners Should Know Before Accepting a Cash Offer",
+    excerpt: "That 'cash buyer' who wants your house might not be a buyer at all. Learn how wholesalers operate, why their model costs you money, and how to protect yourself with competing investor offers.",
+    category: "Consumer Protection",
+    date: "February 8, 2026",
+    readTime: "12 min read",
+  },
+  {
     slug: "how-to-sell-inherited-house-bay-area",
     title: "How to Sell an Inherited House in the Bay Area: A Complete Guide",
     excerpt: "Inherited a property in the San Francisco Bay Area? Learn your options for selling — from probate requirements to getting competing cash offers from investors.",

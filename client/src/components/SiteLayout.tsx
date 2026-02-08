@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/about", label: "About" },
   { href: "/reviews", label: "Reviews" },
   { href: "/service-areas", label: "Service Areas" },
+  { href: "/what-is-a-wholesaler", label: "Wholesalers" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];

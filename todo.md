@@ -58,3 +58,7 @@
 - [x] Change all "24 hours" response time references to "1 hour" across the site
 - [x] Research and compile all cities, towns, and unincorporated areas for all 14 Greater Bay Area counties
 - [x] Update Service Areas page with comprehensive location listings per county for SEO
+- [x] Create dedicated "What is a Wholesaler?" page with SEO-optimized content
+- [x] Create blog post about wholesaling and why competing offers are better
+- [x] Add "What is a Wholesaler?" to site navigation
+- [x] Wire up routing for new page
