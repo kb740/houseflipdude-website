@@ -1,28 +1,29 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { MapPin, ArrowRight } from "lucide-react";
+import { MapPin, ArrowRight, Building2 } from "lucide-react";
 
 const bayAreaCounties = [
-  { slug: "san-francisco", name: "San Francisco", desc: "From Pacific Heights to the Sunset, we buy houses across every SF neighborhood." },
-  { slug: "oakland", name: "Oakland / Alameda County", desc: "Oakland, Berkeley, Fremont, Hayward, and all of Alameda County." },
-  { slug: "san-jose", name: "San Jose / Santa Clara County", desc: "San Jose, Sunnyvale, Santa Clara, Mountain View, and the entire South Bay." },
-  { slug: "san-mateo", name: "San Mateo County", desc: "Daly City, Redwood City, San Mateo, Pacifica, and the Peninsula." },
-  { slug: "contra-costa", name: "Contra Costa County", desc: "Concord, Walnut Creek, Richmond, Antioch, and all of Contra Costa." },
-  { slug: "marin", name: "Marin County", desc: "San Rafael, Novato, Mill Valley, and throughout Marin County." },
-  { slug: "sonoma", name: "Sonoma County", desc: "Santa Rosa, Petaluma, Rohnert Park, and Sonoma County wine country." },
-  { slug: "solano", name: "Solano County", desc: "Vallejo, Fairfield, Vacaville, Benicia, and all of Solano County." },
-  { slug: "napa", name: "Napa County", desc: "Napa, American Canyon, St. Helena, and Napa Valley." },
+  { slug: "san-francisco", name: "San Francisco", cities: 1, communities: 48, desc: "Every neighborhood from Pacific Heights to Bayview-Hunters Point, the Sunset to SoMa." },
+  { slug: "oakland", name: "Oakland / Alameda County", cities: 14, communities: 10, desc: "Alameda, Albany, Berkeley, Dublin, Emeryville, Fremont, Hayward, Livermore, Newark, Oakland, Piedmont, Pleasanton, San Leandro, Union City, and unincorporated communities." },
+  { slug: "san-jose", name: "San Jose / Santa Clara County", cities: 15, communities: 14, desc: "Campbell, Cupertino, Gilroy, Los Altos, Los Gatos, Milpitas, Morgan Hill, Mountain View, Palo Alto, San Jose, Santa Clara, Saratoga, Sunnyvale, and more." },
+  { slug: "san-mateo", name: "San Mateo County", cities: 20, communities: 19, desc: "Atherton, Belmont, Brisbane, Burlingame, Daly City, Foster City, Half Moon Bay, Menlo Park, Pacifica, Redwood City, San Mateo, South San Francisco, and more." },
+  { slug: "contra-costa", name: "Contra Costa County", cities: 19, communities: 33, desc: "Antioch, Brentwood, Concord, Danville, Lafayette, Martinez, Oakley, Orinda, Pittsburg, Richmond, San Ramon, Walnut Creek, and 33 unincorporated communities." },
+  { slug: "marin", name: "Marin County", cities: 11, communities: 25, desc: "Belvedere, Corte Madera, Fairfax, Larkspur, Mill Valley, Novato, Ross, San Anselmo, San Rafael, Sausalito, Tiburon, and 25 unincorporated communities." },
+  { slug: "sonoma", name: "Sonoma County", cities: 9, communities: 29, desc: "Cloverdale, Cotati, Healdsburg, Petaluma, Rohnert Park, Santa Rosa, Sebastopol, Sonoma, Windsor, and 29 wine country communities." },
+  { slug: "solano", name: "Solano County", cities: 7, communities: 8, desc: "Benicia, Dixon, Fairfield, Rio Vista, Suisun City, Vacaville, Vallejo, and surrounding unincorporated areas." },
+  { slug: "napa", name: "Napa County", cities: 5, communities: 12, desc: "American Canyon, Calistoga, Napa, St. Helena, Yountville, and 12 Napa Valley communities including Angwin, Oakville, and Rutherford." },
 ];
 
 const otherAreas = [
-  { slug: "sacramento", name: "Sacramento", desc: "Sacramento, Elk Grove, Roseville, Folsom, and the greater Sacramento metro." },
-  { slug: "stockton", name: "Stockton / San Joaquin", desc: "Stockton, Tracy, Manteca, Lodi, and San Joaquin County." },
-  { slug: "modesto", name: "Modesto / Stanislaus County", desc: "Modesto, Turlock, Ceres, and all of Stanislaus County." },
-  { slug: "santa-cruz", name: "Santa Cruz County", desc: "Santa Cruz, Watsonville, Scotts Valley, Capitola, and the Santa Cruz coast." },
-  { slug: "monterey", name: "Monterey County", desc: "Monterey, Salinas, Pacific Grove, Seaside, and the Monterey Peninsula." },
+  { slug: "sacramento", name: "Sacramento", cities: 6, communities: 13, desc: "Sacramento, Elk Grove, Folsom, Rancho Cordova, Citrus Heights, Galt, and 13 unincorporated communities including Carmichael, Fair Oaks, and Arden-Arcade." },
+  { slug: "stockton", name: "Stockton / San Joaquin", cities: 7, communities: 10, desc: "Stockton, Tracy, Manteca, Lodi, Lathrop, Ripon, Escalon, and surrounding communities." },
+  { slug: "modesto", name: "Modesto / Stanislaus County", cities: 9, communities: 6, desc: "Modesto, Turlock, Ceres, Patterson, Oakdale, Riverbank, Newman, Hughson, Waterford, and surrounding areas." },
+  { slug: "santa-cruz", name: "Santa Cruz County", cities: 4, communities: 11, desc: "Santa Cruz, Watsonville, Scotts Valley, Capitola, and 11 coastal and mountain communities." },
+  { slug: "monterey", name: "Monterey County", cities: 9, communities: 10, desc: "Monterey, Salinas, Seaside, Marina, Pacific Grove, and communities throughout the Monterey Peninsula and Salinas Valley." },
 ];
 
-function AreaCard({ slug, name, desc }: { slug: string; name: string; desc: string }) {
+function AreaCard({ slug, name, cities, communities, desc }: { slug: string; name: string; cities: number; communities: number; desc: string }) {
+  const total = cities + communities;
   return (
     <Link href={`/service-areas/${slug}`} className="group">
       <div className="bg-card rounded-xl border border-border p-6 hover:border-primary hover:shadow-lg transition-all h-full">
@@ -32,7 +33,12 @@ function AreaCard({ slug, name, desc }: { slug: string; name: string; desc: stri
           </div>
           <div>
             <h3 className="font-bold text-foreground group-hover:text-primary transition-colors">{name}</h3>
-            <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{desc}</p>
+            <div className="flex items-center gap-2 mt-1 mb-2">
+              <span className="inline-flex items-center gap-1 text-xs font-medium bg-primary/10 text-primary rounded-full px-2 py-0.5">
+                <Building2 className="w-3 h-3" /> {total} locations
+              </span>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
           </div>
         </div>
       </div>
@@ -41,17 +47,20 @@ function AreaCard({ slug, name, desc }: { slug: string; name: string; desc: stri
 }
 
 export default function ServiceAreas() {
+  const totalBayArea = bayAreaCounties.reduce((sum, c) => sum + c.cities + c.communities, 0);
+  const totalOther = otherAreas.reduce((sum, c) => sum + c.cities + c.communities, 0);
+  const grandTotal = totalBayArea + totalOther;
+
   return (
     <div>
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-accent/30 py-16 lg:py-20">
         <div className="container text-center max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight">
-            We Buy Houses Across <span className="text-primary">California</span>
+            We Buy Houses in <span className="text-primary">{grandTotal}+ Locations</span> Across California
           </h1>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            Our investor network covers the entire San Francisco Bay Area, Sacramento, and the Central Valley.
-            No matter where your property is, we have investors ready to compete for it.
+            Our investor network covers every city, town, and unincorporated community across the San Francisco Bay Area, Sacramento, and the Central Valley. No matter where your property is, we have investors ready to compete for it.
           </p>
         </div>
       </section>
@@ -62,7 +71,7 @@ export default function ServiceAreas() {
           <h2 className="text-3xl font-extrabold text-foreground mb-2">
             San Francisco <span className="text-primary">Bay Area</span>
           </h2>
-          <p className="text-muted-foreground mb-8">All 9 core Bay Area counties covered by our investor network.</p>
+          <p className="text-muted-foreground mb-8">All 9 core Bay Area counties — {totalBayArea} cities, towns, and communities covered by our investor network.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {bayAreaCounties.map(a => (
               <AreaCard key={a.slug} {...a} />
@@ -77,11 +86,31 @@ export default function ServiceAreas() {
           <h2 className="text-3xl font-extrabold text-foreground mb-2">
             Sacramento, Central Valley & <span className="text-primary">Beyond</span>
           </h2>
-          <p className="text-muted-foreground mb-8">Expanding our reach across California.</p>
+          <p className="text-muted-foreground mb-8">Expanding our reach across California — {totalOther} additional locations.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {otherAreas.map(a => (
               <AreaCard key={a.slug} {...a} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SEO Content Block */}
+      <section className="py-12 lg:py-16 bg-background">
+        <div className="container max-w-4xl">
+          <h2 className="text-2xl font-bold text-foreground mb-4">
+            Sell Your House Fast Anywhere in the Bay Area & Beyond
+          </h2>
+          <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+            <p>
+              HouseFlipDude is the San Francisco Bay Area's premier marketplace for homeowners who need to sell their property quickly and for top dollar. Our network of experienced real estate investors covers all 9 Bay Area counties — Alameda County, Contra Costa County, Marin County, Napa County, San Francisco County, San Mateo County, Santa Clara County, Solano County, and Sonoma County — plus Sacramento, San Joaquin, Stanislaus, Santa Cruz, and Monterey counties.
+            </p>
+            <p>
+              Whether you own a house in San Francisco, Oakland, San Jose, or any of the hundreds of cities, towns, and unincorporated communities throughout Northern California, our investors are ready to compete for your property. We buy houses in any condition — from move-in ready homes to properties that need extensive renovation. No repairs, no agent commissions, no fees, and you choose the closing date.
+            </p>
+            <p>
+              Click on any county above to see the complete list of cities, towns, and unincorporated communities where we actively purchase properties, along with information about common selling situations and local market insights.
+            </p>
           </div>
         </div>
       </section>

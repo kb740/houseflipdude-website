@@ -56,3 +56,5 @@
 - [x] Update tests for new form fields
 - [x] Change all user-facing "Kelly" references to "Our Team" in call-to-action and response messaging
 - [x] Change all "24 hours" response time references to "1 hour" across the site
+- [x] Research and compile all cities, towns, and unincorporated areas for all 14 Greater Bay Area counties
+- [x] Update Service Areas page with comprehensive location listings per county for SEO
