@@ -6,6 +6,7 @@ import { z } from "zod";
 import { createLead, getLeads, getLeadById, updateLeadStatus, createContactMessage, getContactMessages } from "./db";
 import { TRPCError } from "@trpc/server";
 import { notifyNewLead, notifyNewContact } from "./notifications";
+import { makeRequest } from "./_core/map";
 
 const adminProcedure = protectedProcedure.use(({ ctx, next }) => {
   if (ctx.user.role !== "admin") throw new TRPCError({ code: "FORBIDDEN" });
@@ -75,6 +76,70 @@ export const appRouter = router({
       .mutation(async ({ input }) => {
         await updateLeadStatus(input.id, input.status, input.notes);
         return { success: true };
+      }),
+  }),
+
+  places: router({
+    autocomplete: publicProcedure
+      .input(z.object({ input: z.string().min(2) }))
+      .query(async ({ input }) => {
+        const data = await makeRequest<{
+          predictions: Array<{
+            place_id: string;
+            description: string;
+            structured_formatting: {
+              main_text: string;
+              secondary_text: string;
+            };
+          }>;
+          status: string;
+        }>("/maps/api/place/autocomplete/json", {
+          input: input.input,
+          components: "country:us",
+          types: "address",
+        });
+        return (data.predictions || []).map((p) => ({
+          placeId: p.place_id,
+          description: p.description,
+          mainText: p.structured_formatting?.main_text || p.description,
+          secondaryText: p.structured_formatting?.secondary_text || "",
+        }));
+      }),
+
+    details: publicProcedure
+      .input(z.object({ placeId: z.string() }))
+      .query(async ({ input }) => {
+        const data = await makeRequest<{
+          result: {
+            formatted_address: string;
+            address_components: Array<{
+              long_name: string;
+              short_name: string;
+              types: string[];
+            }>;
+            geometry?: { location: { lat: number; lng: number } };
+          };
+          status: string;
+        }>("/maps/api/place/details/json", {
+          place_id: input.placeId,
+          fields: "address_component,formatted_address,geometry",
+        });
+        const result = data.result;
+        if (!result) return null;
+        const components = result.address_components || [];
+        const getComponent = (type: string) =>
+          components.find((c) => c.types.includes(type))?.long_name || "";
+        const getShort = (type: string) =>
+          components.find((c) => c.types.includes(type))?.short_name || "";
+        return {
+          fullAddress: result.formatted_address,
+          street: `${getComponent("street_number")} ${getComponent("route")}`.trim(),
+          city: getComponent("locality") || getComponent("sublocality_level_1") || getComponent("administrative_area_level_2"),
+          state: getShort("administrative_area_level_1"),
+          zip: getComponent("postal_code"),
+          lat: result.geometry?.location?.lat,
+          lng: result.geometry?.location?.lng,
+        };
       }),
   }),
 

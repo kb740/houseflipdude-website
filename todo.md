@@ -28,3 +28,8 @@
 - [x] Add DRE license # 01205925 throughout the site (footer, About page, Home page, schema markup)
 - [x] Create bitmoji-based favicon and set as site favicon (circular crop of head, all sizes)
 - [x] Add Google Places address autocomplete with validation to lead capture form
+- [x] Create modified bitmoji with TOP $ !!! sign text
+- [x] Generate QR code linking to www.houseflipdude.com
+- [x] Design two-sided half-page handout (5.5x8.5) for door drops
+- [x] Design jumbo postcard (6x9) for direct mail
+- [x] Fix Google Places address autocomplete not showing suggestions when typing (routed through server-side tRPC)
