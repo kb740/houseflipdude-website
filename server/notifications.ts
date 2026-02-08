@@ -41,7 +41,7 @@ function formatLeadNotification(lead: {
     `Message: ${lead.message || "No additional details provided"}`,
     ``,
     `---`,
-    `Action: Call ${lead.fullName} at ${lead.phone} within 24 hours.`,
+    `Action: Call ${lead.fullName} at ${lead.phone} within 1 hour.`,
     `View all leads at: https://www.houseflipdude.com/admin/leads`,
   ];
 

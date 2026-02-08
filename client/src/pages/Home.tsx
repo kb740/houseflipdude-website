@@ -23,14 +23,14 @@ const benefits = [
 ];
 
 const steps = [
-  { num: "1", title: "Tell Us About Your Property", desc: "Fill out the quick form below. Takes about 60 seconds. Kelly will call you within 24 hours." },
+  { num: "1", title: "Tell Us About Your Property", desc: "Fill out the quick form below. Takes about 60 seconds. Our team will call you within 1 hour." },
   { num: "2", title: "Investors Compete for Your House", desc: "We present your property to our network of experienced Bay Area investors who submit competing offers." },
   { num: "3", title: "Pick Your Best Offer & Close", desc: "Review your offers, choose the best one, and close on your timeline. It's that simple." },
 ];
 
 const testimonials = [
   { name: "Maria G.", location: "Oakland, CA", text: "I inherited a house that needed tons of work. HouseFlipDude got me 4 competing offers in 48 hours. I got way more than the first investor who knocked on my door offered.", rating: 5 },
-  { name: "David & Sarah T.", location: "San Jose, CA", text: "Kelly was straight-up honest about everything. No pressure, no games. The whole process was smoother than we expected and we closed in 2 weeks.", rating: 5 },
+  { name: "David & Sarah T.", location: "San Jose, CA", text: "The team was straight-up honest about everything. No pressure, no games. The whole process was smoother than we expected and we closed in 2 weeks.", rating: 5 },
   { name: "Robert L.", location: "San Mateo, CA", text: "After dealing with pushy 'we buy houses' companies, HouseFlipDude was a breath of fresh air. Casual, professional, and got me top dollar for my fixer.", rating: 5 },
 ];
 
@@ -83,10 +83,10 @@ export default function Home() {
             {/* Hero form */}
             <div id="get-offer" className="bg-card rounded-2xl shadow-xl border border-border p-6 lg:p-8">
               <div className="flex items-center gap-3 mb-2">
-                <img src={BITMOJI_URL} alt="Kelly" className="h-12 w-12 rounded-full object-cover object-top border-2 border-primary/20" />
+                <img src={BITMOJI_URL} alt="HouseFlipDude" className="h-12 w-12 rounded-full object-cover object-top border-2 border-primary/20" />
                 <div>
                   <h2 className="text-xl font-bold text-card-foreground">Get Your Competing Offers</h2>
-                  <p className="text-sm text-muted-foreground">Takes 60 seconds. Kelly calls you within 24 hours.</p>
+                  <p className="text-sm text-muted-foreground">Takes 60 seconds. Our team calls you within 1 hour.</p>
                 </div>
               </div>
               <LeadCaptureForm variant="hero" />
@@ -158,11 +158,11 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
-                Meet Kelly — <span className="text-primary">The House Flip Dude</span>
+                Meet Our Team — <span className="text-primary">The House Flip Dude</span>
               </h2>
               <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
                 With 20+ years buying houses across the Bay Area, Sacramento, and Central Valley,
-                Kelly Beardslee built HouseFlipDude to give homeowners something the industry doesn't —
+                our team built HouseFlipDude to give homeowners something the industry doesn't —
                 real competition for their property. No corporate scripts. No pressure. Just straight talk
                 and a network of investors ready to pay top dollar.
               </p>
@@ -175,7 +175,7 @@ export default function Home() {
               </div>
               <Link href="/about">
                 <Button variant="outline" className="mt-6 font-semibold">
-                  Read Kelly's Full Story <ArrowRight className="w-4 h-4 ml-2" />
+                  Read Our Full Story <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
             </div>
@@ -183,7 +183,7 @@ export default function Home() {
               <div className="text-center">
                 <Play className="w-16 h-16 text-muted-foreground/40 mx-auto mb-3" />
                 <p className="text-muted-foreground font-medium">Video Coming Soon</p>
-                <p className="text-sm text-muted-foreground/60">Kelly introduces HouseFlipDude</p>
+                <p className="text-sm text-muted-foreground/60">Our team introduces HouseFlipDude</p>
               </div>
             </div>
           </div>

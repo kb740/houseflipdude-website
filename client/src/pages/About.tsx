@@ -5,14 +5,14 @@ import { CheckCircle, ArrowRight, Play, Award, MapPin, Users, TrendingUp } from 
 const BITMOJI_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/93737141/gvaUXmsdfRQeTwkA.png";
 
 const milestones = [
-  { year: "2000s", title: "Started Buying Fixers", desc: "Kelly began purchasing and renovating distressed properties across the Bay Area, learning the market from the ground up." },
-  { year: "2010s", title: "Built an Investor Network", desc: "After hundreds of deals, Kelly cultivated relationships with top investors across California — professionals who have collectively bought thousands of homes." },
-  { year: "2020s", title: "Launched HouseFlipDude", desc: "Kelly created HouseFlipDude to give homeowners something the industry doesn't — real competition for their property from multiple vetted investors." },
+  { year: "2000s", title: "Started Buying Fixers", desc: "Our team began purchasing and renovating distressed properties across the Bay Area, learning the market from the ground up." },
+  { year: "2010s", title: "Built an Investor Network", desc: "After hundreds of deals, our team cultivated relationships with top investors across California — professionals who have collectively bought thousands of homes." },
+  { year: "2020s", title: "Launched HouseFlipDude", desc: "Our team created HouseFlipDude to give homeowners something the industry doesn't — real competition for their property from multiple vetted investors." },
 ];
 
 const values = [
-  { icon: Users, title: "Straight Talk, No Scripts", desc: "Kelly tells it like it is. No corporate jargon, no high-pressure tactics, no bait-and-switch. You'll know exactly where you stand from the first phone call." },
-  { icon: Award, title: "Deep Local Knowledge", desc: "20+ years buying houses across the Bay Area, Sacramento, and Central Valley means Kelly knows every neighborhood, every market quirk, and every shortcut to getting deals done." },
+  { icon: Users, title: "Straight Talk, No Scripts", desc: "Our team tells it like it is. No corporate jargon, no high-pressure tactics, no bait-and-switch. You'll know exactly where you stand from the first phone call." },
+  { icon: Award, title: "Deep Local Knowledge", desc: "20+ years buying houses across the Bay Area, Sacramento, and Central Valley means our team knows every neighborhood, every market quirk, and every shortcut to getting deals done." },
   { icon: TrendingUp, title: "Competition Gets You More", desc: "The HouseFlipDude model is built on a simple truth: when multiple investors compete for your house, you get a better price than when one buyer makes a take-it-or-leave-it offer." },
 ];
 
@@ -28,17 +28,17 @@ export default function About() {
                 <Award className="w-4 h-4" /> Licensed California Real Estate Broker — DRE# 01205925
               </div>
               <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight">
-                Meet <span className="text-primary">Kelly Beardslee</span>
+                Meet <span className="text-primary">Our Team</span>
                 <br />
                 <span className="text-secondary">The House Flip Dude</span>
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
                 With over 20 years of experience buying hundreds of houses across the San Francisco Bay Area,
-                Sacramento, and the Central Valley, Kelly built HouseFlipDude to solve a problem he saw every day:
+                Sacramento, and the Central Valley, our team built HouseFlipDude to solve a problem we saw every day:
                 homeowners getting lowballed by single-buyer cash companies.
               </p>
               <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-                His solution? Create a marketplace where multiple experienced investors compete for your property —
+                Our solution? Create a marketplace where multiple experienced investors compete for your property —
                 so you get top dollar instead of settling for the first offer that comes along.
               </p>
             </div>
@@ -46,7 +46,7 @@ export default function About() {
               <div className="relative">
                 <img
                   src={BITMOJI_URL}
-                  alt="Kelly Beardslee - HouseFlipDude"
+                  alt="HouseFlipDude Team"
                   className="w-64 h-64 object-contain mx-auto"
                 />
               </div>
@@ -73,7 +73,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Kelly's Story */}
+      {/* Our Story */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="container max-w-4xl">
           <h2 className="text-3xl font-extrabold text-foreground text-center mb-10">
@@ -99,14 +99,14 @@ export default function About() {
       <section className="py-16 lg:py-20 bg-muted/50">
         <div className="container max-w-4xl">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-extrabold text-foreground">Hear It From Kelly</h2>
-            <p className="mt-3 text-muted-foreground text-lg">Why he started HouseFlipDude and what makes it different.</p>
+            <h2 className="text-3xl font-extrabold text-foreground">Hear It From Our Team</h2>
+            <p className="mt-3 text-muted-foreground text-lg">Why we started HouseFlipDude and what makes it different.</p>
           </div>
           <div className="aspect-video bg-card rounded-2xl border-2 border-dashed border-border flex items-center justify-center">
             <div className="text-center">
               <Play className="w-20 h-20 text-muted-foreground/30 mx-auto mb-3" />
               <p className="text-muted-foreground font-medium text-lg">Video Coming Soon</p>
-              <p className="text-sm text-muted-foreground/60">Kelly shares his story and mission</p>
+              <p className="text-sm text-muted-foreground/60">Our team shares the story and mission</p>
             </div>
           </div>
         </div>
@@ -140,7 +140,7 @@ export default function About() {
               Our <span className="text-primary">Investor Network</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed text-center max-w-2xl mx-auto mb-8">
-              Kelly's network isn't a bunch of random buyers off the internet. These are seasoned professionals
+              Our network isn't a bunch of random buyers off the internet. These are seasoned professionals
               with deep pockets and decades of experience in California real estate.
             </p>
             <div className="grid sm:grid-cols-3 gap-6">
@@ -166,8 +166,8 @@ export default function About() {
         <div className="container max-w-3xl text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4">Let's Talk About Your House</h2>
           <p className="text-primary-foreground/80 text-lg mb-8">
-            Kelly personally handles every initial call. No call centers, no salespeople — just a straight-talking
-            guy in a Hawaiian shirt who knows the Bay Area market inside and out.
+            Our team personally handles every initial call. No call centers, no salespeople — just straight-talking
+            people who know the Bay Area market inside and out.
           </p>
           <Link href="/#get-offer">
             <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold text-lg px-10 py-6 shadow-xl">

@@ -54,3 +54,5 @@
 - [x] Add "Condition" dropdown (Needs Everything, Somewhat Dated, Decent, Good, Great, Other)
 - [x] Update backend schema/validation for new required fields and dropdowns
 - [x] Update tests for new form fields
+- [x] Change all user-facing "Kelly" references to "Our Team" in call-to-action and response messaging
+- [x] Change all "24 hours" response time references to "1 hour" across the site

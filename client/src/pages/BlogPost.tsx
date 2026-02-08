@@ -24,7 +24,7 @@ const blogContent: Record<string, BlogContent> = {
       { heading: "Your Options for Selling", content: "You generally have three options: list with a real estate agent (which means repairs, staging, showings, and 5-6% in commissions), sell to a single cash buyer (fast but often at a steep discount), or use a service like HouseFlipDude where multiple investors compete for your property. The third option gives you the speed and convenience of a cash sale with the competitive pricing of an open market." },
       { heading: "Why Competing Offers Matter for Inherited Properties", content: "Inherited properties are often in less-than-perfect condition. The previous owner may have deferred maintenance for years. When you get a single cash offer, the buyer knows they're your only option and prices accordingly. When multiple investors compete, they know they need to put their best foot forward — which typically means a significantly higher price for you." },
       { heading: "Tax Implications to Consider", content: "One major advantage of inherited property is the 'stepped-up basis' — the property's tax basis is reset to its fair market value at the time of the owner's death. This can significantly reduce or eliminate capital gains taxes when you sell. However, tax laws are complex and change frequently, so consult with a tax professional about your specific situation." },
-      { heading: "Getting Started", content: "If you've inherited a Bay Area property and want to explore your options, the first step is simple: submit your property info through our form. Kelly will personally call you within 24 hours to discuss your situation, answer your questions, and explain how competing investor offers can get you top dollar — even for a property that needs work." },
+      { heading: "Getting Started", content: "If you've inherited a Bay Area property and want to explore your options, the first step is simple: submit your property info through our form. Our team will personally call you within 1 hour to discuss your situation, answer your questions, and explain how competing investor offers can get you top dollar — even for a property that needs work." },
     ],
   },
   "avoid-foreclosure-san-francisco": {
@@ -78,7 +78,7 @@ const blogContent: Record<string, BlogContent> = {
       { heading: "The California Probate Timeline", content: "Standard California probate takes 6-18 months, though complex estates can take longer. The process involves filing a petition, notifying creditors, inventorying assets, and obtaining court approval for the sale. If the property needs to be sold quickly — to cover estate expenses, prevent deterioration, or distribute assets — the timeline can be a significant challenge." },
       { heading: "Selling Property During Probate", content: "Selling a house during probate requires court approval in most cases. The executor or administrator must petition the court for permission to sell, and the court may require an independent appraisal. In some cases, the court may require an 'overbid' process where other buyers can bid at a court hearing — adding time and uncertainty." },
       { heading: "Alternatives to Traditional Probate Sales", content: "If the property was held in a living trust, you may be able to avoid probate entirely and sell the property directly. Even within probate, California's Independent Administration of Estates Act (IAEA) allows executors to sell property without court confirmation in many cases, significantly speeding up the process." },
-      { heading: "How HouseFlipDude Helps with Probate Properties", content: "Probate properties are often in less-than-ideal condition — the previous owner may have been unable to maintain the home in their final years. Our investor network specializes in buying these properties as-is. Kelly has extensive experience with probate sales and can guide you through the process, working within the legal requirements while getting you competing offers for top dollar." },
+      { heading: "How HouseFlipDude Helps with Probate Properties", content: "Probate properties are often in less-than-ideal condition — the previous owner may have been unable to maintain the home in their final years. Our investor network specializes in buying these properties as-is. Our team has extensive experience with probate sales and can guide you through the process, working within the legal requirements while getting you competing offers for top dollar." },
     ],
   },
   "cash-offer-vs-traditional-listing-bay-area": {
@@ -169,7 +169,7 @@ export default function BlogPost() {
         <div className="container max-w-3xl text-center">
           <h2 className="text-3xl font-extrabold mb-4">Have Questions? Let's Talk.</h2>
           <p className="text-primary-foreground/80 text-lg mb-8">
-            Kelly personally handles every call. No salespeople, no scripts — just straight answers.
+            Our team personally handles every call. No salespeople, no scripts — just straight answers.
           </p>
           <Link href="/#get-offer">
             <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold text-lg px-10 py-6 shadow-xl">

@@ -49,7 +49,7 @@ export default function Contact() {
           </h1>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
             Have questions about selling your house? Want to learn more about how competing investor offers work?
-            Kelly personally responds to every inquiry.
+            Our team personally responds to every inquiry.
           </p>
         </div>
       </section>
@@ -61,10 +61,10 @@ export default function Contact() {
             {/* Contact Info */}
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <img src={BITMOJI_URL} alt="Kelly" className="h-14 w-14 rounded-full object-cover object-top border-2 border-primary/20" />
+                <img src={BITMOJI_URL} alt="HouseFlipDude Team" className="h-14 w-14 rounded-full object-cover object-top border-2 border-primary/20" />
                 <div>
-                  <h2 className="text-xl font-bold text-foreground">Kelly Beardslee</h2>
-                  <p className="text-sm text-muted-foreground">The House Flip Dude</p>
+                  <h2 className="text-xl font-bold text-foreground">HouseFlipDude</h2>
+                  <p className="text-sm text-muted-foreground">Our Team</p>
                 </div>
               </div>
 
@@ -87,7 +87,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-foreground">Email</h3>
                     <a href="mailto:kb@houseflipdude.com" className="text-muted-foreground hover:text-primary transition-colors">kb@houseflipdude.com</a>
-                    <p className="text-xs text-muted-foreground mt-1">We respond within 24 hours</p>
+                    <p className="text-xs text-muted-foreground mt-1">We respond within 1 hour</p>
                   </div>
                 </div>
 
@@ -130,13 +130,13 @@ export default function Contact() {
             <div className="lg:col-span-3">
               <div className="bg-card rounded-2xl border border-border p-6 lg:p-8">
                 <h2 className="text-2xl font-bold text-card-foreground mb-1">Send Us a Message</h2>
-                <p className="text-muted-foreground mb-6">We'll get back to you within 24 hours.</p>
+                <p className="text-muted-foreground mb-6">We'll get back to you within 1 hour.</p>
 
                 {submitted ? (
                   <div className="text-center py-12">
                     <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
                     <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
-                    <p className="text-muted-foreground">Kelly will get back to you within 24 hours.</p>
+                    <p className="text-muted-foreground">Our team will get back to you within 1 hour.</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">

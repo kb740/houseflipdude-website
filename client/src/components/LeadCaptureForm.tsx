@@ -31,7 +31,7 @@ export default function LeadCaptureForm({ variant = "hero", className = "" }: Le
   const mutation = trpc.leads.submit.useMutation({
     onSuccess: () => {
       setSubmitted(true);
-      toast.success("Your property info has been submitted! We'll be in touch within 24 hours.");
+      toast.success("Your property info has been submitted! We'll be in touch within 1 hour.");
     },
     onError: (err) => {
       toast.error(err.message || "Something went wrong. Please try again.");
@@ -66,7 +66,7 @@ export default function LeadCaptureForm({ variant = "hero", className = "" }: Le
         <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
         <h3 className="text-2xl font-bold mb-2">You're In!</h3>
         <p className="text-muted-foreground max-w-md mx-auto">
-          Kelly from HouseFlipDude will call you within 24 hours to schedule a quick visit. Your investors are already being lined up.
+          Our team from HouseFlipDude will call you within 1 hour to schedule a quick visit. Your investors are already being lined up.
         </p>
       </div>
     );
@@ -226,7 +226,7 @@ export default function LeadCaptureForm({ variant = "hero", className = "" }: Le
       </Button>
 
       <p className="text-xs text-muted-foreground text-center">
-        No fees. No obligation. No pressure. We'll call you within 24 hours.
+        No fees. No obligation. No pressure. We'll call you within 1 hour.
       </p>
     </form>
   );

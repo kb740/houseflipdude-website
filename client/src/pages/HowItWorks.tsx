@@ -11,14 +11,14 @@ const steps = [
     icon: ClipboardList,
     num: "01",
     title: "Submit Your Property Info",
-    desc: "Fill out our quick form with your property address and basic details. It takes about 60 seconds — no commitment required. Kelly Beardslee, the House Flip Dude himself, will personally call you within 24 hours to learn more about your property and your situation.",
-    details: ["60-second form", "No obligation", "Personal call from Kelly within 24 hours"],
+    desc: "Fill out our quick form with your property address and basic details. It takes about 60 seconds — no commitment required. Our team will personally call you within 1 hour to learn more about your property and your situation.",
+    details: ["60-second form", "No obligation", "Personal call from our team within 1 hour"],
   },
   {
     icon: Users,
     num: "02",
     title: "Investors Compete for Your House",
-    desc: "After Kelly visits your property, we present it to our curated network of experienced Bay Area investors. These are professionals who have collectively purchased thousands of homes and invested hundreds of millions of dollars. They submit competing offers, which drives up your price.",
+    desc: "After our team visits your property, we present it to our curated network of experienced Bay Area investors. These are professionals who have collectively purchased thousands of homes and invested hundreds of millions of dollars. They submit competing offers, which drives up your price.",
     details: ["Vetted investor network", "Multiple competing offers", "Competition drives up your price"],
   },
   {
@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     q: "How quickly will I get offers?",
-    a: "After Kelly visits your property, you'll typically receive competing offers within 24-48 hours. Some properties generate offers even faster.",
+    a: "After our team visits your property, you'll typically receive competing offers within 24-48 hours. Some properties generate offers even faster.",
   },
 ];
 
@@ -107,7 +107,7 @@ export default function HowItWorks() {
         <div className="container max-w-4xl">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-extrabold text-foreground">
-              Watch Kelly Explain the Process
+              Watch Our Team Explain the Process
             </h2>
             <p className="mt-3 text-muted-foreground text-lg">A quick walkthrough of how it all works.</p>
           </div>
@@ -115,7 +115,7 @@ export default function HowItWorks() {
             <div className="text-center">
               <Play className="w-20 h-20 text-muted-foreground/30 mx-auto mb-3" />
               <p className="text-muted-foreground font-medium text-lg">Video Coming Soon</p>
-              <p className="text-sm text-muted-foreground/60">Kelly walks you through the 3-step process</p>
+              <p className="text-sm text-muted-foreground/60">Our team walks you through the 3-step process</p>
             </div>
           </div>
         </div>
