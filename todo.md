@@ -35,3 +35,10 @@
 - [x] Fix Google Places address autocomplete not showing suggestions when typing (routed through server-side tRPC)
 - [x] Update phone number from (555) 123-4567 to (415) 686-2846 throughout the site
 - [x] Change 500+ houses purchased to 1,000+ in all locations (Home page stats, Home page tag, About page)
+- [x] Add Santa Cruz County service area page with city-specific SEO content
+- [x] Add Monterey County service area page with city-specific SEO content
+- [x] Rename "Sacramento & Central Valley" section to "Sacramento, Central Valley & Beyond"
+- [x] Change Modesto / Central Valley to Modesto / Stanislaus County
+- [x] Change 9 Bay Area Counties to 14 Greater Bay Area Counties throughout
+- [x] Change $200M+ In Transactions to $450M+ throughout
+- [x] Update schema markup with new counties and updated references

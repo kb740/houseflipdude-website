@@ -32,6 +32,8 @@ const localBusinessSchema = {
     { "@type": "City", "name": "Sacramento", "containedInPlace": { "@type": "State", "name": "California" } },
     { "@type": "City", "name": "Stockton", "containedInPlace": { "@type": "State", "name": "California" } },
     { "@type": "City", "name": "Modesto", "containedInPlace": { "@type": "State", "name": "California" } },
+    { "@type": "AdministrativeArea", "name": "Santa Cruz County", "containedInPlace": { "@type": "State", "name": "California" } },
+    { "@type": "AdministrativeArea", "name": "Monterey County", "containedInPlace": { "@type": "State", "name": "California" } },
   ],
   "knowsAbout": [
     "Cash home buying",
@@ -94,7 +96,7 @@ const faqSchema = {
       "name": "What areas does HouseFlipDude serve?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We serve all 9 San Francisco Bay Area counties (San Francisco, Alameda, Santa Clara, San Mateo, Contra Costa, Marin, Sonoma, Solano, and Napa), plus Sacramento and the Central Valley (Stockton, Modesto, and surrounding areas)."
+        "text": "We serve all 14 Greater Bay Area counties (San Francisco, Alameda, Santa Clara, San Mateo, Contra Costa, Marin, Sonoma, Solano, Napa, Santa Cruz, and Monterey), plus Sacramento and the Central Valley (Stockton, Modesto/Stanislaus County, and surrounding areas)."
       }
     }
   ]

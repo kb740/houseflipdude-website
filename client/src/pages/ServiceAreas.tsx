@@ -17,7 +17,9 @@ const bayAreaCounties = [
 const otherAreas = [
   { slug: "sacramento", name: "Sacramento", desc: "Sacramento, Elk Grove, Roseville, Folsom, and the greater Sacramento metro." },
   { slug: "stockton", name: "Stockton / San Joaquin", desc: "Stockton, Tracy, Manteca, Lodi, and San Joaquin County." },
-  { slug: "modesto", name: "Modesto / Central Valley", desc: "Modesto, Turlock, Merced, and the greater Central Valley region." },
+  { slug: "modesto", name: "Modesto / Stanislaus County", desc: "Modesto, Turlock, Ceres, and all of Stanislaus County." },
+  { slug: "santa-cruz", name: "Santa Cruz County", desc: "Santa Cruz, Watsonville, Scotts Valley, Capitola, and the Santa Cruz coast." },
+  { slug: "monterey", name: "Monterey County", desc: "Monterey, Salinas, Pacific Grove, Seaside, and the Monterey Peninsula." },
 ];
 
 function AreaCard({ slug, name, desc }: { slug: string; name: string; desc: string }) {
@@ -60,7 +62,7 @@ export default function ServiceAreas() {
           <h2 className="text-3xl font-extrabold text-foreground mb-2">
             San Francisco <span className="text-primary">Bay Area</span>
           </h2>
-          <p className="text-muted-foreground mb-8">All 9 counties covered by our investor network.</p>
+          <p className="text-muted-foreground mb-8">All 9 core Bay Area counties covered by our investor network.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {bayAreaCounties.map(a => (
               <AreaCard key={a.slug} {...a} />
@@ -73,9 +75,9 @@ export default function ServiceAreas() {
       <section className="py-16 lg:py-24 bg-muted/50">
         <div className="container">
           <h2 className="text-3xl font-extrabold text-foreground mb-2">
-            Sacramento & <span className="text-primary">Central Valley</span>
+            Sacramento, Central Valley & <span className="text-primary">Beyond</span>
           </h2>
-          <p className="text-muted-foreground mb-8">Expanding our reach beyond the Bay Area.</p>
+          <p className="text-muted-foreground mb-8">Expanding our reach across California.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {otherAreas.map(a => (
               <AreaCard key={a.slug} {...a} />

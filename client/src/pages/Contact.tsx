@@ -98,7 +98,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-foreground">Service Area</h3>
                     <p className="text-muted-foreground">San Francisco Bay Area, Sacramento & Central Valley</p>
-                    <p className="text-xs text-muted-foreground mt-1">All 9 Bay Area counties + beyond</p>
+                    <p className="text-xs text-muted-foreground mt-1">All 14 Greater Bay Area counties + beyond</p>
                   </div>
                 </div>
 

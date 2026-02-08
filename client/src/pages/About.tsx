@@ -60,12 +60,12 @@ export default function About() {
                   <div className="text-xs text-muted-foreground">Houses Purchased</div>
                 </div>
                 <div className="bg-card rounded-xl border border-border p-4 text-center">
-                  <div className="text-2xl font-extrabold text-primary">$200M+</div>
+                  <div className="text-2xl font-extrabold text-primary">$450M+</div>
                   <div className="text-xs text-muted-foreground">In Transactions</div>
                 </div>
                 <div className="bg-card rounded-xl border border-border p-4 text-center">
-                  <div className="text-2xl font-extrabold text-primary">9</div>
-                  <div className="text-xs text-muted-foreground">Bay Area Counties</div>
+                  <div className="text-2xl font-extrabold text-primary">14</div>
+                  <div className="text-xs text-muted-foreground">Greater Bay Area Counties</div>
                 </div>
               </div>
             </div>

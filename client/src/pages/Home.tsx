@@ -11,8 +11,8 @@ const BITMOJI_URL = "https://files.manuscdn.com/user_upload_by_module/session_fi
 const stats = [
   { value: "20+", label: "Years Experience" },
   { value: "1,000+", label: "Houses Purchased" },
-  { value: "$200M+", label: "In Transactions" },
-  { value: "9", label: "Bay Area Counties" },
+  { value: "$450M+", label: "In Transactions" },
+  { value: "14", label: "Greater Bay Area Counties" },
 ];
 
 const benefits = [
