@@ -27,3 +27,4 @@
 - [ ] Google Sheets logging of leads on form submission
 - [x] Add DRE license # 01205925 throughout the site (footer, About page, Home page, schema markup)
 - [x] Create bitmoji-based favicon and set as site favicon (circular crop of head, all sizes)
+- [x] Add Google Places address autocomplete with validation to lead capture form

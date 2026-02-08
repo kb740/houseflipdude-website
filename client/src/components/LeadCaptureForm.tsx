@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 import { CheckCircle, Loader2 } from "lucide-react";
+import AddressAutocomplete from "@/components/AddressAutocomplete";
 
 interface LeadCaptureFormProps {
   variant?: "hero" | "sidebar" | "page";
@@ -86,13 +87,15 @@ export default function LeadCaptureForm({ variant = "hero", className = "" }: Le
         <div className={isCompact ? "" : "sm:col-span-2"}>
           <div className="space-y-1.5">
             <Label htmlFor="propertyAddress" className="text-sm font-medium">Property Address *</Label>
-            <Input
+            <AddressAutocomplete
               id="propertyAddress"
-              placeholder="123 Main St, San Francisco, CA 94102"
               value={form.propertyAddress}
-              onChange={e => setForm(f => ({ ...f, propertyAddress: e.target.value }))}
+              onChange={(val) => setForm(f => ({ ...f, propertyAddress: val }))}
+              onAddressSelect={(addr) => {
+                setForm(f => ({ ...f, propertyAddress: addr.fullAddress }));
+              }}
+              placeholder="Start typing your property address..."
               required
-              className="bg-background"
             />
           </div>
         </div>
