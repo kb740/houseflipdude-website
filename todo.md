@@ -67,3 +67,6 @@
 - [x] Create blog post about Realtor partnerships and commission sharing
 - [x] Add "For Realtors" to site navigation
 - [x] Wire up routing for new Realtors page
+- [x] Create comprehensive sitemap.xml with all site pages
+- [x] Create/update robots.txt to reference sitemap
+- [x] Write step-by-step Google Search Console submission guide
