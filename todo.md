@@ -71,3 +71,4 @@
 - [x] Create/update robots.txt to reference sitemap
 - [x] Write step-by-step Google Search Console submission guide
 - [x] Replace all bitmoji images with new TOP $ !!! bitmoji across the site
+- [x] Replace bitmoji with white text TOP $ !!! version
