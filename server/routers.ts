@@ -28,6 +28,7 @@ export const appRouter = router({
     submit: publicProcedure
       .input(
         z.object({
+          submitterType: z.string().min(1, "Please select whether you are a Homeowner, Realtor, or Other"),
           fullName: z.string().min(1, "Name is required"),
           phone: z.string().min(7, "Phone number is required"),
           email: z.string().email("Valid email is required"),
@@ -37,11 +38,12 @@ export const appRouter = router({
           reasonForSelling: z.string().optional(),
           timing: z.string().optional(),
           condition: z.string().optional(),
-          message: z.string().min(1, "Please tell us about your property"),
+          message: z.string().min(1, "Please tell us about the property"),
         })
       )
       .mutation(async ({ input }) => {
         const leadData = {
+          submitterType: input.submitterType || null,
           fullName: input.fullName,
           phone: input.phone,
           email: input.email || null,

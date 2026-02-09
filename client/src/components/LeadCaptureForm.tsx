@@ -17,6 +17,7 @@ interface LeadCaptureFormProps {
 export default function LeadCaptureForm({ variant = "hero", className = "" }: LeadCaptureFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
+    submitterType: "",
     fullName: "",
     phone: "",
     email: "",
@@ -40,6 +41,10 @@ export default function LeadCaptureForm({ variant = "hero", className = "" }: Le
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!form.submitterType) {
+      toast.error("Please select whether you are a Homeowner, Realtor, or Other.");
+      return;
+    }
     if (!form.fullName || !form.phone || !form.propertyAddress || !form.email) {
       toast.error("Please fill in your name, phone, property address, and email.");
       return;
@@ -54,7 +59,7 @@ export default function LeadCaptureForm({ variant = "hero", className = "" }: Le
       return;
     }
     if (!form.message) {
-      toast.error("Please tell us about your property.");
+      toast.error("Please tell us about the property.");
       return;
     }
     mutation.mutate(form);
@@ -77,6 +82,19 @@ export default function LeadCaptureForm({ variant = "hero", className = "" }: Le
   return (
     <form onSubmit={handleSubmit} className={`space-y-4 ${className}`}>
       <div className={isCompact ? "space-y-3" : "grid grid-cols-1 sm:grid-cols-2 gap-4"}>
+        <div className="space-y-1.5">
+          <Label htmlFor="submitterType" className="text-sm font-medium">I am a *</Label>
+          <Select value={form.submitterType} onValueChange={v => setForm(f => ({ ...f, submitterType: v }))}>
+            <SelectTrigger className="bg-background">
+              <SelectValue placeholder="Select one" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="homeowner">Homeowner</SelectItem>
+              <SelectItem value="realtor">Realtor</SelectItem>
+              <SelectItem value="other">Other</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
         <div className="space-y-1.5">
           <Label htmlFor="fullName" className="text-sm font-medium">Your Name *</Label>
           <Input
@@ -201,7 +219,7 @@ export default function LeadCaptureForm({ variant = "hero", className = "" }: Le
       </div>
 
       <div className="space-y-1.5">
-        <Label htmlFor="message" className="text-sm font-medium">Tell us about your property *</Label>
+        <Label htmlFor="message" className="text-sm font-medium">Tell us about the property *</Label>
         <Textarea
           id="message"
           placeholder="Condition, timeline, any details that help us get you the best offers..."

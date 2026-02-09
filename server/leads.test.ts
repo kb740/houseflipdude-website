@@ -124,6 +124,7 @@ describe("leads.submit", () => {
     const caller = appRouter.createCaller(ctx);
 
     const result = await caller.leads.submit({
+      submitterType: "homeowner",
       fullName: "Jane Doe",
       phone: "4155551234",
       propertyAddress: "456 Oak Ave, Oakland, CA 94607",
@@ -143,6 +144,7 @@ describe("leads.submit", () => {
     const caller = appRouter.createCaller(ctx);
 
     const result = await caller.leads.submit({
+      submitterType: "homeowner",
       fullName: "John Smith",
       phone: "5105551234",
       propertyAddress: "789 Elm St, San Jose, CA 95112",
@@ -160,6 +162,7 @@ describe("leads.submit", () => {
 
     await expect(
       caller.leads.submit({
+        submitterType: "homeowner",
         fullName: "",
         phone: "4155551234",
         propertyAddress: "123 Main St, SF, CA 94102",
@@ -176,6 +179,7 @@ describe("leads.submit", () => {
 
     await expect(
       caller.leads.submit({
+        submitterType: "homeowner",
         fullName: "Jane Doe",
         phone: "",
         propertyAddress: "123 Main St, SF, CA 94102",
@@ -192,6 +196,7 @@ describe("leads.submit", () => {
 
     await expect(
       caller.leads.submit({
+        submitterType: "homeowner",
         fullName: "Jane Doe",
         phone: "4155551234",
         propertyAddress: "",
@@ -208,6 +213,7 @@ describe("leads.submit", () => {
 
     await expect(
       caller.leads.submit({
+        submitterType: "homeowner",
         fullName: "Jane Doe",
         phone: "4155551234",
         propertyAddress: "123 Main St, SF, CA 94102",
@@ -224,6 +230,7 @@ describe("leads.submit", () => {
 
     await expect(
       caller.leads.submit({
+        submitterType: "homeowner",
         fullName: "Jane Doe",
         phone: "4155551234",
         propertyAddress: "123 Main St, SF, CA 94102",
@@ -240,6 +247,7 @@ describe("leads.submit", () => {
 
     await expect(
       caller.leads.submit({
+        submitterType: "homeowner",
         fullName: "Jane Doe",
         phone: "4155551234",
         propertyAddress: "123 Main St, SF, CA 94102",
@@ -255,6 +263,7 @@ describe("leads.submit", () => {
 
     await expect(
       caller.leads.submit({
+        submitterType: "homeowner",
         fullName: "Jane Doe",
         phone: "4155551234",
         propertyAddress: "123 Main St, SF, CA 94102",
@@ -271,6 +280,7 @@ describe("leads.submit", () => {
 
     await expect(
       caller.leads.submit({
+        submitterType: "homeowner",
         fullName: "Jane Doe",
         phone: "4155551234",
         propertyAddress: "123 Main St, SF, CA 94102",
@@ -286,6 +296,7 @@ describe("leads.submit", () => {
     const caller = appRouter.createCaller(ctx);
 
     const result = await caller.leads.submit({
+      submitterType: "other",
       fullName: "Bob Builder",
       phone: "9255551234",
       propertyAddress: "100 Main St, Walnut Creek, CA 94596",
@@ -302,6 +313,7 @@ describe("leads.submit", () => {
     const caller = appRouter.createCaller(ctx);
 
     const result = await caller.leads.submit({
+      submitterType: "realtor",
       fullName: "Alice Wonder",
       phone: "5105559876",
       propertyAddress: "200 Oak Blvd, Berkeley, CA 94704",

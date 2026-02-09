@@ -72,3 +72,5 @@
 - [x] Write step-by-step Google Search Console submission guide
 - [x] Replace all bitmoji images with new TOP $ !!! bitmoji across the site
 - [x] Replace bitmoji with white text TOP $ !!! version
+- [x] Add "I am a" dropdown (Homeowner, Realtor, Other) to lead capture form
+- [x] Change "Tell us about your property" to "Tell us about the property"

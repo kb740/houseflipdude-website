@@ -17,6 +17,7 @@ export type InsertUser = typeof users.$inferInsert;
 
 export const leads = mysqlTable("leads", {
   id: int("id").autoincrement().primaryKey(),
+  submitterType: varchar("submitterType", { length: 64 }),
   fullName: varchar("fullName", { length: 255 }).notNull(),
   phone: varchar("phone", { length: 30 }).notNull(),
   email: varchar("email", { length: 320 }),

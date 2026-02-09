@@ -1,0 +1,1 @@
+ALTER TABLE `leads` ADD `submitterType` varchar(64);

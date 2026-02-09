@@ -6,6 +6,7 @@ const NOTIFICATION_EMAIL = "KB@ironhorsere.com";
  * Formats lead data into a readable notification message.
  */
 function formatLeadNotification(lead: {
+  submitterType?: string | null;
   fullName: string;
   phone: string;
   propertyAddress: string;
@@ -28,6 +29,7 @@ function formatLeadNotification(lead: {
   const lines = [
     `NEW LEAD SUBMISSION — ${timestamp} (Pacific)`,
     ``,
+    `Submitter Type: ${lead.submitterType || "Not specified"}`,
     `Name: ${lead.fullName}`,
     `Phone: ${lead.phone}`,
     `Email: ${lead.email || "Not provided"}`,
@@ -90,6 +92,7 @@ function formatContactNotification(contact: {
  * Non-blocking — logs errors but doesn't throw so the lead submission still succeeds.
  */
 export async function notifyNewLead(lead: {
+  submitterType?: string | null;
   fullName: string;
   phone: string;
   propertyAddress: string;
