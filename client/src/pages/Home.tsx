@@ -6,7 +6,7 @@ import {
   TrendingUp, CheckCircle, ArrowRight, Play, Star, MapPin
 } from "lucide-react";
 
-const BITMOJI_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/93737141/gvaUXmsdfRQeTwkA.png";
+const BITMOJI_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/93737141/kEarhmepkcMGjaMg.png";
 
 const stats = [
   { value: "20+", label: "Years Experience" },

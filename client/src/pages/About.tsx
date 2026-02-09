@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { CheckCircle, ArrowRight, Play, Award, MapPin, Users, TrendingUp } from "lucide-react";
 
-const BITMOJI_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/93737141/gvaUXmsdfRQeTwkA.png";
+const BITMOJI_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/93737141/kEarhmepkcMGjaMg.png";
 
 const milestones = [
   { year: "2000s", title: "Started Buying Fixers", desc: "Our team began purchasing and renovating distressed properties across the Bay Area, learning the market from the ground up." },

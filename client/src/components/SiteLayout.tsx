@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const BITMOJI_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/93737141/gvaUXmsdfRQeTwkA.png";
+const BITMOJI_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/93737141/kEarhmepkcMGjaMg.png";
 
 const navLinks = [
   { href: "/", label: "Home" },

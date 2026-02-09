@@ -8,7 +8,7 @@ import { toast } from "sonner";
 import { Phone, Mail, MapPin, Clock, CheckCircle, Loader2, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 
-const BITMOJI_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/93737141/gvaUXmsdfRQeTwkA.png";
+const BITMOJI_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/93737141/kEarhmepkcMGjaMg.png";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
