@@ -62,3 +62,4 @@
 - [x] Create blog post about wholesaling and why competing offers are better
 - [x] Add "What is a Wholesaler?" to site navigation
 - [x] Wire up routing for new page
+- [x] Fix homepage meta description to be between 50-160 characters (currently 182)
