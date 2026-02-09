@@ -13,6 +13,14 @@ interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    slug: "realtors-partner-with-houseflipdude-fixer-listings",
+    title: "Realtors: How to Sell Your Fixer Listings Faster and for More Money",
+    excerpt: "Have a fixer listing that's sitting on the MLS? Or know of a property that could use competing investor offers? Learn how Bay Area Realtors are partnering with HouseFlipDude to close tough deals and earn commissions.",
+    category: "Realtor Partnerships",
+    date: "February 8, 2026",
+    readTime: "10 min read",
+  },
+  {
     slug: "real-estate-wholesalers-bay-area-what-homeowners-should-know",
     title: "Real Estate Wholesalers in the Bay Area: What Homeowners Should Know Before Accepting a Cash Offer",
     excerpt: "That 'cash buyer' who wants your house might not be a buyer at all. Learn how wholesalers operate, why their model costs you money, and how to protect yourself with competing investor offers.",

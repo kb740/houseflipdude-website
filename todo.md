@@ -63,3 +63,7 @@
 - [x] Add "What is a Wholesaler?" to site navigation
 - [x] Wire up routing for new page
 - [x] Fix homepage meta description to be between 50-160 characters (currently 182)
+- [x] Create dedicated "For Realtors" page with two partnership models (fixer listings + off-market referrals)
+- [x] Create blog post about Realtor partnerships and commission sharing
+- [x] Add "For Realtors" to site navigation
+- [x] Wire up routing for new Realtors page
