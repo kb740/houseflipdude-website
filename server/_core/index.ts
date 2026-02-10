@@ -2,6 +2,8 @@ import "dotenv/config";
 import express from "express";
 import { createServer } from "http";
 import net from "net";
+import path from "path";
+import fs from "fs";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { registerOAuthRoutes } from "./oauth";
 import { appRouter } from "../routers";
@@ -43,6 +45,32 @@ async function startServer() {
       createContext,
     })
   );
+  // Serve hand-crafted sitemap.xml and robots.txt before other middleware
+  // This ensures the production platform doesn't override with an auto-generated version
+  app.get("/sitemap.xml", (_req, res) => {
+    const sitemapPath = process.env.NODE_ENV === "development"
+      ? path.resolve(import.meta.dirname, "../../client/public/sitemap.xml")
+      : path.resolve(import.meta.dirname, "public/sitemap.xml");
+    if (fs.existsSync(sitemapPath)) {
+      res.set("Content-Type", "application/xml");
+      res.send(fs.readFileSync(sitemapPath, "utf-8"));
+    } else {
+      res.status(404).send("Sitemap not found");
+    }
+  });
+
+  app.get("/robots.txt", (_req, res) => {
+    const robotsPath = process.env.NODE_ENV === "development"
+      ? path.resolve(import.meta.dirname, "../../client/public/robots.txt")
+      : path.resolve(import.meta.dirname, "public/robots.txt");
+    if (fs.existsSync(robotsPath)) {
+      res.set("Content-Type", "text/plain");
+      res.send(fs.readFileSync(robotsPath, "utf-8"));
+    } else {
+      res.status(404).send("robots.txt not found");
+    }
+  });
+
   // development mode uses Vite, production mode uses static files
   if (process.env.NODE_ENV === "development") {
     await setupVite(app, server);

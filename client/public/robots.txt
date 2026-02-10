@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-Sitemap: https://www.houseflipdude.com/sitemap.xml
+Sitemap: https://houseflipdude.com/sitemap.xml
