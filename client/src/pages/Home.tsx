@@ -162,8 +162,8 @@ export default function Home() {
               </h2>
               <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
                 With 20+ years buying houses across the Bay Area, Sacramento, and Central Valley,
-                our team built HouseFlipDude to give homeowners something the industry doesn't —
-                real competition for their property. No corporate scripts. No pressure. Just straight talk
+                our team built HouseFlipDude to give homeowners something the industry was missing —
+                real competition for their fixer property. No corporate scripts. No pressure. Just straight talk
                 and a network of investors ready to pay top dollar.
               </p>
               <div className="flex flex-wrap gap-3 mt-6">
