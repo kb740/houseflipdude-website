@@ -92,4 +92,4 @@
 - [x] Update sitemap.xml with new blog post URLs (now 39 URLs total)
 - [x] Add SEO title tags and meta descriptions targeting key cities for all 14 county pages
 - [x] Add natural keyword-rich paragraphs to each county page weaving in city names with action phrases
-- [x] Fix sitemap.xml to include all 39 pages (added server-side route to override platform auto-generated sitemap; updated URLs to non-www)
+- [x] Fix sitemap.xml to include all 39 pages (renamed to sitemap-hfd.xml to bypass platform edge interception; robots.txt updated to point to it)

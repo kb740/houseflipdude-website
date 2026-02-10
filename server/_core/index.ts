@@ -47,10 +47,11 @@ async function startServer() {
   );
   // Serve hand-crafted sitemap.xml and robots.txt before other middleware
   // This ensures the production platform doesn't override with an auto-generated version
-  app.get("/sitemap.xml", (_req, res) => {
+  // Serve the renamed sitemap that bypasses the platform's auto-generated /sitemap.xml
+  app.get("/sitemap-hfd.xml", (_req, res) => {
     const sitemapPath = process.env.NODE_ENV === "development"
-      ? path.resolve(import.meta.dirname, "../../client/public/sitemap.xml")
-      : path.resolve(import.meta.dirname, "public/sitemap.xml");
+      ? path.resolve(import.meta.dirname, "../../client/public/sitemap-hfd.xml")
+      : path.resolve(import.meta.dirname, "public/sitemap-hfd.xml");
     if (fs.existsSync(sitemapPath)) {
       res.set("Content-Type", "application/xml");
       res.send(fs.readFileSync(sitemapPath, "utf-8"));
