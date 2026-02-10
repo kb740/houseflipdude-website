@@ -19,6 +19,8 @@ import AdminLeads from "./pages/AdminLeads";
 import WhatIsWholesaler from "./pages/WhatIsWholesaler";
 import ForRealtors from "./pages/ForRealtors";
 import SchemaMarkup from "./components/SchemaMarkup";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -45,6 +47,8 @@ function Router() {
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/contact" component={Contact} />
         <Route path="/admin/leads" component={AdminLeads} />
+        <Route path="/privacy" component={PrivacyPolicy} />
+        <Route path="/terms" component={TermsOfService} />
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>

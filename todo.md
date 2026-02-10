@@ -76,3 +76,6 @@
 - [x] Change "Tell us about your property" to "Tell us about the property"
 - [x] Download video from Google Drive and upload to S3
 - [x] Replace all video placeholder sections with embedded video across the site
+- [x] Create Privacy Policy page with content and fix 404
+- [x] Create Terms of Service page with content and fix 404
+- [x] Update sitemap.xml to include all 33+ pages (now lists 33 URLs)

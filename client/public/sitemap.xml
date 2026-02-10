@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core Pages -->
+  <!-- Core Pages (7) -->
   <url>
     <loc>https://www.houseflipdude.com/</loc>
     <changefreq>weekly</changefreq>
@@ -37,14 +37,26 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Service Areas Index -->
+  <!-- Legal Pages (2) -->
+  <url>
+    <loc>https://www.houseflipdude.com/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.houseflipdude.com/terms</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Service Areas Index (1) -->
   <url>
     <loc>https://www.houseflipdude.com/service-areas</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Service Areas - Individual Counties -->
+  <!-- Service Areas - Individual Counties (14) -->
   <url>
     <loc>https://www.houseflipdude.com/service-areas/san-francisco</loc>
     <changefreq>monthly</changefreq>
@@ -116,14 +128,14 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Index -->
+  <!-- Blog Index (1) -->
   <url>
     <loc>https://www.houseflipdude.com/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Posts -->
+  <!-- Blog Posts (8) -->
   <url>
     <loc>https://www.houseflipdude.com/blog/realtors-partner-with-houseflipdude-fixer-listings</loc>
     <changefreq>monthly</changefreq>
