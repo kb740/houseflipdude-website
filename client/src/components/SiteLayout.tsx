@@ -113,7 +113,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       {/* Footer */}
       <footer className="bg-foreground text-background/80">
         <div className="container py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Brand */}
             <div>
               <div className="flex items-center gap-2 mb-4">
@@ -136,6 +136,18 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
                     {l.label}
                   </Link>
                 ))}
+              </div>
+            </div>
+
+            {/* Solutions */}
+            <div>
+              <h4 className="font-semibold text-background mb-4 text-sm uppercase tracking-wider">Solutions</h4>
+              <div className="flex flex-col gap-2 text-sm text-background/60">
+                <Link href="/foreclosure" className="hover:text-primary transition-colors">Facing Foreclosure</Link>
+                <Link href="/inherited-homes" className="hover:text-primary transition-colors">Inherited a Home</Link>
+                <Link href="/sell-as-is" className="hover:text-primary transition-colors">Sell As-Is</Link>
+                <Link href="/what-is-a-wholesaler" className="hover:text-primary transition-colors">What is a Wholesaler?</Link>
+                <Link href="/for-realtors" className="hover:text-primary transition-colors">For Realtors</Link>
               </div>
             </div>
 

@@ -79,3 +79,9 @@
 - [x] Create Privacy Policy page with content and fix 404
 - [x] Create Terms of Service page with content and fix 404
 - [x] Update sitemap.xml to include all 33+ pages (now lists 33 URLs)
+- [x] Create Foreclosure landing page with SEO content and lead capture
+- [x] Create Inherited Homes landing page with SEO content and lead capture
+- [x] Create Sell As-Is landing page with SEO content and lead capture
+- [x] Add routing for all three new pages
+- [x] Add navigation links for situation pages (footer Solutions section)
+- [x] Update sitemap.xml with three new pages (now 36 URLs)

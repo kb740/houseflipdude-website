@@ -21,6 +21,9 @@ import ForRealtors from "./pages/ForRealtors";
 import SchemaMarkup from "./components/SchemaMarkup";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import Foreclosure from "./pages/Foreclosure";
+import InheritedHomes from "./pages/InheritedHomes";
+import SellAsIs from "./pages/SellAsIs";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -43,6 +46,9 @@ function Router() {
         <Route path="/service-areas/:slug" component={ServiceAreaDetail} />
         <Route path="/what-is-a-wholesaler" component={WhatIsWholesaler} />
         <Route path="/for-realtors" component={ForRealtors} />
+        <Route path="/foreclosure" component={Foreclosure} />
+        <Route path="/inherited-homes" component={InheritedHomes} />
+        <Route path="/sell-as-is" component={SellAsIs} />
         <Route path="/blog" component={Blog} />
         <Route path="/blog/:slug" component={BlogPost} />
         <Route path="/contact" component={Contact} />
