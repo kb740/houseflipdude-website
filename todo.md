@@ -90,3 +90,5 @@
 - [x] Create blog post for Sell As-Is situation with SEO content
 - [x] Add all three blog posts to Blog listing page
 - [x] Update sitemap.xml with new blog post URLs (now 39 URLs total)
+- [x] Add SEO title tags and meta descriptions targeting key cities for all 14 county pages
+- [x] Add natural keyword-rich paragraphs to each county page weaving in city names with action phrases
