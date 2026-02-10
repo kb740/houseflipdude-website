@@ -13,6 +13,30 @@ interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    slug: "foreclosure-timeline-california-how-to-stop-it",
+    title: "The California Foreclosure Timeline: Every Stage Explained and How to Stop It",
+    excerpt: "From the first missed payment to the trustee sale, here's exactly what happens during foreclosure in California — and the specific actions you can take at each stage to protect your home and equity.",
+    category: "Foreclosure",
+    date: "February 10, 2026",
+    readTime: "14 min read",
+  },
+  {
+    slug: "inherited-house-bay-area-complete-decision-guide",
+    title: "Inherited a House in the Bay Area? The Complete Decision-Making Guide for 2026",
+    excerpt: "Keep it, rent it, renovate and sell, or sell as-is? A comprehensive guide to every option when you inherit Bay Area property — with real numbers, tax implications, and timelines.",
+    category: "Inherited Properties",
+    date: "February 10, 2026",
+    readTime: "15 min read",
+  },
+  {
+    slug: "sell-house-as-is-bay-area-maximize-value",
+    title: "How to Sell Your Bay Area House As-Is and Still Get Top Dollar",
+    excerpt: "Selling as-is doesn't mean settling for less. Learn the strategies Bay Area homeowners are using to sell properties in any condition while maximizing their sale price through competing investor offers.",
+    category: "Selling Tips",
+    date: "February 10, 2026",
+    readTime: "12 min read",
+  },
+  {
     slug: "realtors-partner-with-houseflipdude-fixer-listings",
     title: "Realtors: How to Sell Your Fixer Listings Faster and for More Money",
     excerpt: "Have a fixer listing that's sitting on the MLS? Or know of a property that could use competing investor offers? Learn how Bay Area Realtors are partnering with HouseFlipDude to close tough deals and earn commissions.",

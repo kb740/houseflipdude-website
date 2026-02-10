@@ -85,3 +85,8 @@
 - [x] Add routing for all three new pages
 - [x] Add navigation links for situation pages (footer Solutions section)
 - [x] Update sitemap.xml with three new pages (now 36 URLs)
+- [x] Create blog post for Foreclosure situation with SEO content
+- [x] Create blog post for Inherited Homes situation with SEO content
+- [x] Create blog post for Sell As-Is situation with SEO content
+- [x] Add all three blog posts to Blog listing page
+- [x] Update sitemap.xml with new blog post URLs (now 39 URLs total)
