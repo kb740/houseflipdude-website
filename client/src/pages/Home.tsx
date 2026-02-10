@@ -179,12 +179,16 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
-            <div className="aspect-video bg-muted rounded-2xl border-2 border-dashed border-border flex items-center justify-center">
-              <div className="text-center">
-                <Play className="w-16 h-16 text-muted-foreground/40 mx-auto mb-3" />
-                <p className="text-muted-foreground font-medium">Video Coming Soon</p>
-                <p className="text-sm text-muted-foreground/60">Our team introduces HouseFlipDude</p>
-              </div>
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
+              <video
+                className="w-full h-full object-cover"
+                controls
+                preload="metadata"
+                poster=""
+              >
+                <source src="https://files.manuscdn.com/user_upload_by_module/session_file/93737141/mmrKwtjczNJMjzAu.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>

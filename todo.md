@@ -74,3 +74,5 @@
 - [x] Replace bitmoji with white text TOP $ !!! version
 - [x] Add "I am a" dropdown (Homeowner, Realtor, Other) to lead capture form
 - [x] Change "Tell us about your property" to "Tell us about the property"
+- [x] Download video from Google Drive and upload to S3
+- [x] Replace all video placeholder sections with embedded video across the site

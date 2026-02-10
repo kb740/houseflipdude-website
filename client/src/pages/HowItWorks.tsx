@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import {
   ClipboardList, Users, Handshake, Phone, Calendar,
-  CheckCircle, ArrowRight, Play, Shield, DollarSign, Clock
+  CheckCircle, ArrowRight, Shield, DollarSign, Clock
 } from "lucide-react";
 
 const steps = [
@@ -111,12 +111,15 @@ export default function HowItWorks() {
             </h2>
             <p className="mt-3 text-muted-foreground text-lg">A quick walkthrough of how it all works.</p>
           </div>
-          <div className="aspect-video bg-card rounded-2xl border-2 border-dashed border-border flex items-center justify-center">
-            <div className="text-center">
-              <Play className="w-20 h-20 text-muted-foreground/30 mx-auto mb-3" />
-              <p className="text-muted-foreground font-medium text-lg">Video Coming Soon</p>
-              <p className="text-sm text-muted-foreground/60">Our team walks you through the 3-step process</p>
-            </div>
+          <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
+            <video
+              className="w-full h-full object-cover"
+              controls
+              preload="metadata"
+            >
+              <source src="https://files.manuscdn.com/user_upload_by_module/session_file/93737141/mmrKwtjczNJMjzAu.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </section>
