@@ -13,6 +13,14 @@ interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    slug: "the-great-brain-drain",
+    title: "The Great Brain Drain",
+    excerpt: "What happens when experienced professionals willingly teach AI their hard-won expertise? A Bay Area house flipper with 20+ years of experience reflects on knowledge harvesting, the march toward super-abundance, and what it means for the human spirit.",
+    category: "Industry Insights",
+    date: "February 11, 2026",
+    readTime: "10 min read",
+  },
+  {
     slug: "foreclosure-timeline-california-how-to-stop-it",
     title: "The California Foreclosure Timeline: Every Stage Explained and How to Stop It",
     excerpt: "From the first missed payment to the trustee sale, here's exactly what happens during foreclosure in California — and the specific actions you can take at each stage to protect your home and equity.",

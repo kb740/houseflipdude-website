@@ -96,3 +96,4 @@
 - [x] Draft Google Business Profile description
 - [x] Draft Google Business Profile weekly posts (8 posts)
 - [x] Replace all video instances on the site with the new HFD_Intro.mp4 video
+- [x] Add new blog post: "The Great Brain Drain" (AI, knowledge harvesting, house flipping)
