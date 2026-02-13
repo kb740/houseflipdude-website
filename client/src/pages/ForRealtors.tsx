@@ -47,7 +47,7 @@ export default function ForRealtors() {
                     See Partnership Models <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </a>
-                <a href="tel:+14156862846">
+                <a href="tel:+19252371335">
                   <Button size="lg" variant="outline" className="font-bold text-lg px-8 py-6">
                     <Phone className="w-5 h-5 mr-2" /> Call Us Direct
                   </Button>
@@ -297,12 +297,12 @@ export default function ForRealtors() {
                 Whether you have a fixer listing or know of a property that could benefit from competing investor offers, we'd love to hear from you. Reach out directly — Realtor-to-Broker, no salespeople, no scripts.
               </p>
               <div className="space-y-4 mb-8">
-                <a href="tel:+14156862846" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+                <a href="tel:+19252371335" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-bold">(415) 686-2846</p>
+                    <p className="font-bold">(925) 237-1335</p>
                     <p className="text-sm text-muted-foreground">Call or text anytime</p>
                   </div>
                 </a>
@@ -384,9 +384,9 @@ export default function ForRealtors() {
             Stop settling for one lowball offer. Let our investor network compete to buy your client's property for top dollar — and earn your full commission.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+14156862846">
+            <a href="tel:+19252371335">
               <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold text-lg px-10 py-6 shadow-xl">
-                <Phone className="w-5 h-5 mr-2" /> Call (415) 686-2846
+                <Phone className="w-5 h-5 mr-2" /> Call (925) 237-1335
               </Button>
             </a>
             <a href="mailto:kb@houseflipdude.com">

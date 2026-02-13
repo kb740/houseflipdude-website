@@ -117,3 +117,4 @@
 - [x] Fix /how-it-works page not indexing in Google Search Console
 - [x] Fix /service-areas/marin (and all service area pages) not indexing in Google Search Console
 - [x] Add unique SEO titles and meta descriptions to ALL pages site-wide using useSEO hook
+- [x] Change all instances of phone number 415-686-2846 to 925-237-1335 across the entire site

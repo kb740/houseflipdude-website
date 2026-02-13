@@ -14,7 +14,7 @@ const BITMOJI_URL = "https://files.manuscdn.com/user_upload_by_module/session_fi
 export default function Contact() {
   useSEO({
     title: "Contact HouseFlipDude | Get a Cash Offer on Your Bay Area House Today",
-    description: "Call (415) 686-2846 or fill out our form to get competing cash offers on your Bay Area house. No fees, no obligation. Our team responds within 1 hour.",
+    description: "Call (925) 237-1335 or fill out our form to get competing cash offers on your Bay Area house. No fees, no obligation. Our team responds within 1 hour.",
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -81,7 +81,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Phone</h3>
-                    <a href="tel:+14156862846" className="text-muted-foreground hover:text-primary transition-colors">(415) 686-2846</a>
+                    <a href="tel:+19252371335" className="text-muted-foreground hover:text-primary transition-colors">(925) 237-1335</a>
                     <p className="text-xs text-muted-foreground mt-1">Call or text anytime</p>
                   </div>
                 </div>

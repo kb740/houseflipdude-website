@@ -123,7 +123,7 @@ export default function PrivacyPolicy() {
               <li>Non-discrimination for exercising your privacy rights</li>
             </ul>
             <p className="mt-3 leading-relaxed">
-              To exercise these rights, contact us at kb@houseflipdude.com or call (415) 686-2846.
+              To exercise these rights, contact us at kb@houseflipdude.com or call (925) 237-1335.
             </p>
           </section>
 
@@ -161,7 +161,7 @@ export default function PrivacyPolicy() {
             </p>
             <ul className="list-none space-y-1 mt-2">
               <li><strong>Email:</strong> kb@houseflipdude.com</li>
-              <li><strong>Phone:</strong> (415) 686-2846</li>
+              <li><strong>Phone:</strong> (925) 237-1335</li>
               <li><strong>Website:</strong> www.houseflipdude.com</li>
             </ul>
             <p className="mt-4 text-sm text-muted-foreground">

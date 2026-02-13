@@ -7,7 +7,7 @@ import { useSEO } from "@/hooks/useSEO";
 export default function SellAsIs() {
   useSEO({
     title: "Sell Your Bay Area House As-Is | HouseFlipDude — No Repairs, No Fees",
-    description: "Sell your Bay Area house as-is with zero repairs, zero fees. Multiple investors compete to buy your home in any condition. Close in as little as 7 days. Call (415) 686-2846.",
+    description: "Sell your Bay Area house as-is with zero repairs, zero fees. Multiple investors compete to buy your home in any condition. Close in as little as 7 days. Call (925) 237-1335.",
   });
 
   return (
@@ -28,7 +28,7 @@ export default function SellAsIs() {
           <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/contact">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white gap-2">
-                <Phone className="w-4 h-4" /> Call Us — (415) 686-2846
+                <Phone className="w-4 h-4" /> Call Us — (925) 237-1335
               </Button>
             </Link>
             <a href="#get-offers">
@@ -220,7 +220,7 @@ export default function SellAsIs() {
                 step: "1",
                 icon: <Zap className="w-5 h-5 text-primary" />,
                 title: "Tell Us About the Property",
-                desc: "Fill out the form below or call us at (415) 686-2846. Tell us about the property's condition, location, and your timeline. No judgment — we've seen everything."
+                desc: "Fill out the form below or call us at (925) 237-1335. Tell us about the property's condition, location, and your timeline. No judgment — we've seen everything."
               },
               {
                 step: "2",
@@ -335,7 +335,7 @@ export default function SellAsIs() {
                   <Phone className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
                   <div>
                     <p className="font-bold text-foreground">Want to talk first?</p>
-                    <p className="text-muted-foreground text-sm">Call us at <a href="tel:+14156862846" className="text-primary font-semibold hover:underline">(415) 686-2846</a>. We'll give you an honest assessment of whether your property is a fit for our investor network.</p>
+                    <p className="text-muted-foreground text-sm">Call us at <a href="tel:+19252371335" className="text-primary font-semibold hover:underline">(925) 237-1335</a>. We'll give you an honest assessment of whether your property is a fit for our investor network.</p>
                   </div>
                 </div>
               </div>

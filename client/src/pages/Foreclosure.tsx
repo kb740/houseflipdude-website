@@ -7,7 +7,7 @@ import { useSEO } from "@/hooks/useSEO";
 export default function Foreclosure() {
   useSEO({
     title: "Avoid Foreclosure in the Bay Area | HouseFlipDude — Sell Fast, Save Your Equity",
-    description: "Facing foreclosure on your Bay Area home? Get competing cash offers from investors and close in as little as 7 days. Save your equity and avoid the credit damage. Call (415) 686-2846.",
+    description: "Facing foreclosure on your Bay Area home? Get competing cash offers from investors and close in as little as 7 days. Save your equity and avoid the credit damage. Call (925) 237-1335.",
   });
 
   return (
@@ -28,7 +28,7 @@ export default function Foreclosure() {
           <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/contact">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white gap-2">
-                <Phone className="w-4 h-4" /> Call Us Now — (415) 686-2846
+                <Phone className="w-4 h-4" /> Call Us Now — (925) 237-1335
               </Button>
             </Link>
             <a href="#get-offers">
@@ -201,7 +201,7 @@ export default function Foreclosure() {
               {
                 step: "1",
                 title: "Tell Us About Your Situation",
-                desc: "Fill out the form below or call us at (415) 686-2846. We'll ask about your property, your timeline, and where you are in the foreclosure process. Everything is confidential."
+                desc: "Fill out the form below or call us at (925) 237-1335. We'll ask about your property, your timeline, and where you are in the foreclosure process. Everything is confidential."
               },
               {
                 step: "2",
@@ -314,7 +314,7 @@ export default function Foreclosure() {
                   <Phone className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                   <div>
                     <p className="font-bold text-foreground">Prefer to talk now?</p>
-                    <p className="text-muted-foreground text-sm">Call us directly at <a href="tel:+14156862846" className="text-primary font-semibold hover:underline">(415) 686-2846</a>. We understand the urgency and are here to help.</p>
+                    <p className="text-muted-foreground text-sm">Call us directly at <a href="tel:+19252371335" className="text-primary font-semibold hover:underline">(925) 237-1335</a>. We understand the urgency and are here to help.</p>
                   </div>
                 </div>
               </div>

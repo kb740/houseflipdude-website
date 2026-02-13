@@ -37,7 +37,7 @@ const testimonials = [
 export default function Home() {
   useSEO({
     title: "HouseFlipDude | Investors Compete to Buy Your Bay Area House for Top Dollar",
-    description: "Sell your Bay Area house fast. Multiple investors compete to buy your property — any condition, no fees, no commissions. Get competing cash offers today. Call (415) 686-2846.",
+    description: "Sell your Bay Area house fast. Multiple investors compete to buy your property — any condition, no fees, no commissions. Get competing cash offers today. Call (925) 237-1335.",
   });
 
   return (

@@ -7,7 +7,7 @@ const localBusinessSchema = {
   "alternateName": "House Flip Dude - Bay Area Cash Home Buyers",
   "description": "Multiple investors compete to buy your San Francisco Bay Area house for top dollar. Any condition, no fees, close on your timeline.",
   "url": "https://houseflipdude.com",
-  "telephone": "(415) 686-2846",
+  "telephone": "(925) 237-1335",
   "email": "kb@houseflipdude.com",
   "founder": {
     "@type": "Person",

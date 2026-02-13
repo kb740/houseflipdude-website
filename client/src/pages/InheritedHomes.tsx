@@ -7,7 +7,7 @@ import { useSEO } from "@/hooks/useSEO";
 export default function InheritedHomes() {
   useSEO({
     title: "Sell an Inherited House in the Bay Area | HouseFlipDude — Skip Probate Hassles",
-    description: "Inherited a Bay Area house? Get competing cash offers from investors. No repairs, no cleaning, no probate delays. Close in as little as 7 days. Call (415) 686-2846.",
+    description: "Inherited a Bay Area house? Get competing cash offers from investors. No repairs, no cleaning, no probate delays. Close in as little as 7 days. Call (925) 237-1335.",
   });
 
   return (
@@ -28,7 +28,7 @@ export default function InheritedHomes() {
           <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/contact">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white gap-2">
-                <Phone className="w-4 h-4" /> Call Us — (415) 686-2846
+                <Phone className="w-4 h-4" /> Call Us — (925) 237-1335
               </Button>
             </Link>
             <a href="#get-offers">
@@ -183,7 +183,7 @@ export default function InheritedHomes() {
               {
                 step: "1",
                 title: "Tell Us About the Inherited Property",
-                desc: "Fill out the form below or call us at (415) 686-2846. We'll ask about the property condition, the probate status, and your timeline. No obligation, completely confidential."
+                desc: "Fill out the form below or call us at (925) 237-1335. We'll ask about the property condition, the probate status, and your timeline. No obligation, completely confidential."
               },
               {
                 step: "2",
@@ -296,7 +296,7 @@ export default function InheritedHomes() {
                   <Phone className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                   <div>
                     <p className="font-bold text-foreground">Questions? We're here to help.</p>
-                    <p className="text-muted-foreground text-sm">Call us at <a href="tel:+14156862846" className="text-primary font-semibold hover:underline">(415) 686-2846</a>. We'll walk you through the process and answer any questions about selling your inherited home.</p>
+                    <p className="text-muted-foreground text-sm">Call us at <a href="tel:+19252371335" className="text-primary font-semibold hover:underline">(925) 237-1335</a>. We'll walk you through the process and answer any questions about selling your inherited home.</p>
                   </div>
                 </div>
               </div>
