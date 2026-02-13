@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ArrowRight, Calendar, Clock, Tag } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 interface BlogPostMeta {
   slug: string;
@@ -111,6 +112,11 @@ export const blogPosts: BlogPostMeta[] = [
 ];
 
 export default function Blog() {
+  useSEO({
+    title: "HouseFlipDude Blog | Bay Area Real Estate Tips, Market Updates & Home Selling Guides",
+    description: "Expert advice on selling your Bay Area house fast. Tips on inherited homes, fixer-uppers, foreclosure prevention, market trends, and how to get top dollar from competing investors.",
+  });
+
   return (
     <div>
       {/* Hero */}

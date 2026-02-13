@@ -1,6 +1,7 @@
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/useSEO";
 import {
   ClipboardList, Users, Handshake, Phone, Calendar,
   CheckCircle, ArrowRight, Shield, DollarSign, Clock
@@ -58,6 +59,11 @@ const faqs = [
 ];
 
 export default function HowItWorks() {
+  useSEO({
+    title: "How HouseFlipDude Works | 3 Steps to Sell Your Bay Area House Fast",
+    description: "Submit your property info, let multiple investors compete with cash offers, pick the best one and close on your timeline. Zero fees, zero commissions. See how it works.",
+  });
+
   return (
     <div>
       {/* Hero */}

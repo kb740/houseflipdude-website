@@ -1,6 +1,12 @@
 import { useEffect } from "react";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function TermsOfService() {
+  useSEO({
+    title: "Terms of Service | HouseFlipDude",
+    description: "Read the HouseFlipDude terms of service for using our Bay Area house buying platform and competing investor network.",
+  });
+
   useEffect(() => {
     document.title = "Terms of Service | HouseFlipDude - Bay Area Cash Home Buyers";
   }, []);

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { MapPin, ArrowRight, Building2 } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 const bayAreaCounties = [
   { slug: "san-francisco", name: "San Francisco", cities: 1, communities: 48, desc: "Every neighborhood from Pacific Heights to Bayview-Hunters Point, the Sunset to SoMa." },
@@ -47,6 +48,11 @@ function AreaCard({ slug, name, cities, communities, desc }: { slug: string; nam
 }
 
 export default function ServiceAreas() {
+  useSEO({
+    title: "Service Areas | HouseFlipDude — We Buy Houses Across 14 Bay Area Counties",
+    description: "HouseFlipDude buys houses across 14 Bay Area counties including San Francisco, Alameda, Contra Costa, Santa Clara, San Mateo, Marin, and more. Get competing cash offers today.",
+  });
+
   const totalBayArea = bayAreaCounties.reduce((sum, c) => sum + c.cities + c.communities, 0);
   const totalOther = otherAreas.reduce((sum, c) => sum + c.cities + c.communities, 0);
   const grandTotal = totalBayArea + totalOther;

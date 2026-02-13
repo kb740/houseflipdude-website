@@ -1,6 +1,12 @@
 import { useEffect } from "react";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function PrivacyPolicy() {
+  useSEO({
+    title: "Privacy Policy | HouseFlipDude",
+    description: "Read the HouseFlipDude privacy policy. Learn how we collect, use, and protect your personal information when you use our Bay Area house buying service.",
+  });
+
   useEffect(() => {
     document.title = "Privacy Policy | HouseFlipDude - Bay Area Cash Home Buyers";
   }, []);

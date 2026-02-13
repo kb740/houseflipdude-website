@@ -2,8 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ArrowRight, AlertTriangle, CheckCircle, Clock, Shield, DollarSign, Home, Phone, Scale, Users } from "lucide-react";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function Foreclosure() {
+  useSEO({
+    title: "Avoid Foreclosure in the Bay Area | HouseFlipDude — Sell Fast, Save Your Equity",
+    description: "Facing foreclosure on your Bay Area home? Get competing cash offers from investors and close in as little as 7 days. Save your equity and avoid the credit damage. Call (415) 686-2846.",
+  });
+
   return (
     <div>
       {/* Hero */}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { useSEO } from "@/hooks/useSEO";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -11,6 +12,11 @@ import { Link } from "wouter";
 const BITMOJI_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/93737141/TXSkgaQSgDEqEfqV.png";
 
 export default function Contact() {
+  useSEO({
+    title: "Contact HouseFlipDude | Get a Cash Offer on Your Bay Area House Today",
+    description: "Call (415) 686-2846 or fill out our form to get competing cash offers on your Bay Area house. No fees, no obligation. Our team responds within 1 hour.",
+  });
+
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
     fullName: "",

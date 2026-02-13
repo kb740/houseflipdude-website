@@ -2,8 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ArrowRight, AlertTriangle, CheckCircle, XCircle, ShieldAlert, Users, DollarSign, Scale } from "lucide-react";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function WhatIsWholesaler() {
+  useSEO({
+    title: "What Is a Wholesaler? | HouseFlipDude — We're Different, Here's Why",
+    description: "Learn what a real estate wholesaler is and how HouseFlipDude is different. We're a licensed CA broker (DRE #01205925) with competing investors, not a wholesaler flipping contracts.",
+  });
+
   return (
     <div>
       {/* Hero */}

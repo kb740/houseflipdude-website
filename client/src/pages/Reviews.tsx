@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Star, MapPin, ArrowRight, Quote } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 const reviews = [
   { name: "Maria G.", location: "Oakland, CA", text: "I inherited a house that needed tons of work. HouseFlipDude got me 4 competing offers in 48 hours. I got way more than the first investor who knocked on my door offered. The team was honest and upfront about everything.", rating: 5, situation: "Inherited Property" },
@@ -15,6 +16,11 @@ const reviews = [
 ];
 
 export default function Reviews() {
+  useSEO({
+    title: "HouseFlipDude Reviews | 5-Star Ratings from Bay Area Home Sellers",
+    description: "Read real reviews from Bay Area homeowners who sold their houses through HouseFlipDude. See why sellers rate us 5 stars for competing offers, fast closings, and zero fees.",
+  });
+
   return (
     <div>
       {/* Hero */}

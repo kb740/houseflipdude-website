@@ -16,8 +16,14 @@ import {
   Zap,
 } from "lucide-react";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function ForRealtors() {
+  useSEO({
+    title: "Realtor Partnerships | HouseFlipDude — Sell Fixer Listings Faster, Earn Full Commission",
+    description: "Bay Area Realtors: partner with HouseFlipDude to sell fixer listings faster. Our investor network competes for your listings. You keep your full commission. DRE #01205925.",
+  });
+
   return (
     <div>
       {/* Hero */}

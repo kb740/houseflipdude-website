@@ -112,3 +112,8 @@
 - [x] Write SEO description, tags, and hashtags for intro video
 - [x] Write YouTube optimization guide (likes, subscribes, in-video links, chapters)
 - [x] Fix Soft 404 issue on homepage — removed conflicting duplicate canonical tag and standardized all URLs to non-www
+- [x] Fix /about page not indexing in Google Search Console
+- [x] Fix /contact page not indexing in Google Search Console
+- [x] Fix /how-it-works page not indexing in Google Search Console
+- [x] Fix /service-areas/marin (and all service area pages) not indexing in Google Search Console
+- [x] Add unique SEO titles and meta descriptions to ALL pages site-wide using useSEO hook

@@ -2,8 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle, Clock, Home, Phone, DollarSign, FileText, Users, Heart, Scale, Key } from "lucide-react";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function InheritedHomes() {
+  useSEO({
+    title: "Sell an Inherited House in the Bay Area | HouseFlipDude — Skip Probate Hassles",
+    description: "Inherited a Bay Area house? Get competing cash offers from investors. No repairs, no cleaning, no probate delays. Close in as little as 7 days. Call (415) 686-2846.",
+  });
+
   return (
     <div>
       {/* Hero */}

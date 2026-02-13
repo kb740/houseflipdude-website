@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link, useParams } from "wouter";
 import { ArrowLeft, ArrowRight, Calendar, Clock, Tag } from "lucide-react";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import { useSEO } from "@/hooks/useSEO";
 import { blogPosts } from "./Blog";
 
 interface BlogContent {
@@ -210,6 +211,11 @@ const blogContent: Record<string, BlogContent> = {
 export default function BlogPost() {
   const params = useParams<{ slug: string }>();
   const post = blogContent[params.slug || ""];
+
+  useSEO({
+    title: post ? `${post.title} | HouseFlipDude Blog` : "Article Not Found | HouseFlipDude",
+    description: post ? post.sections[0]?.content?.substring(0, 155) + "..." : "Article not found on the HouseFlipDude blog.",
+  });
 
   if (!post) {
     return (

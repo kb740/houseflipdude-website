@@ -1,6 +1,7 @@
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/useSEO";
 import {
   Users, Shield, Clock, DollarSign, Home as HomeIcon,
   TrendingUp, CheckCircle, ArrowRight, Play, Star, MapPin
@@ -33,8 +34,12 @@ const testimonials = [
   { name: "David & Sarah T.", location: "San Jose, CA", text: "The team was straight-up honest about everything. No pressure, no games. The whole process was smoother than we expected and we closed in 2 weeks.", rating: 5 },
   { name: "Robert L.", location: "San Mateo, CA", text: "After dealing with pushy 'we buy houses' companies, HouseFlipDude was a breath of fresh air. Casual, professional, and got me top dollar for my fixer.", rating: 5 },
 ];
-
 export default function Home() {
+  useSEO({
+    title: "HouseFlipDude | Investors Compete to Buy Your Bay Area House for Top Dollar",
+    description: "Sell your Bay Area house fast. Multiple investors compete to buy your property — any condition, no fees, no commissions. Get competing cash offers today. Call (415) 686-2846.",
+  });
+
   return (
     <div>
       {/* Hero Section */}

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { CheckCircle, ArrowRight, Award, MapPin, Users, TrendingUp } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 const BITMOJI_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/93737141/TXSkgaQSgDEqEfqV.png";
 
@@ -17,6 +18,11 @@ const values = [
 ];
 
 export default function About() {
+  useSEO({
+    title: "About HouseFlipDude | 20+ Years Buying Bay Area Houses — Meet Our Team",
+    description: "Meet the team behind HouseFlipDude. With 20+ years buying houses across the Bay Area, Sacramento & Central Valley, we built a platform where investors compete to buy your property for top dollar.",
+  });
+
   return (
     <div>
       {/* Hero */}

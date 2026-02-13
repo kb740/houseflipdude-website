@@ -2,8 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle, XCircle, Home, Phone, DollarSign, Wrench, Clock, Users, Zap, ShieldCheck } from "lucide-react";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function SellAsIs() {
+  useSEO({
+    title: "Sell Your Bay Area House As-Is | HouseFlipDude — No Repairs, No Fees",
+    description: "Sell your Bay Area house as-is with zero repairs, zero fees. Multiple investors compete to buy your home in any condition. Close in as little as 7 days. Call (415) 686-2846.",
+  });
+
   return (
     <div>
       {/* Hero */}
