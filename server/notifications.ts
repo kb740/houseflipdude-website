@@ -44,7 +44,7 @@ function formatLeadNotification(lead: {
     ``,
     `---`,
     `Action: Call ${lead.fullName} at ${lead.phone} within 1 hour.`,
-    `View all leads at: https://www.houseflipdude.com/admin/leads`,
+    `View all leads at: https://houseflipdude.com/admin/leads`,
   ];
 
   return { title, content: lines.join("\n") };

@@ -97,3 +97,18 @@
 - [x] Draft Google Business Profile weekly posts (8 posts)
 - [x] Replace all video instances on the site with the new HFD_Intro.mp4 video
 - [x] Add new blog post: "The Great Brain Drain" (AI, knowledge harvesting, house flipping)
+- [x] Design YouTube channel art banner matching HouseFlipDude branding
+- [x] Redesign YouTube banner so key content fits within 1546x423 center safe zone
+- [x] Create two separate images from YouTube banner: background layer and inner rectangle layer
+- [x] Replace arrows on inner rectangle banner with more meaningful homeowner-positive icon (3 variations)
+- [x] Generate inner rectangle at 1546x423 px with icons: contract, dollar signs, SOLD sign (left to right)
+- [x] Generate individual transparent PNGs for each banner element (background, bridge/houses, text, icons)
+- [x] Document exact colors and font names used in the banner
+- [x] Generate YouTube profile picture (800x800 circular) matching HouseFlipDude branding
+- [x] Design YouTube video thumbnail templates (4 variations for different video types)
+- [x] Draft SEO video descriptions and tags targeting Bay Area house-selling searches
+- [x] Transcribe intro video and analyze content
+- [x] Create custom thumbnail for intro video
+- [x] Write SEO description, tags, and hashtags for intro video
+- [x] Write YouTube optimization guide (likes, subscribes, in-video links, chapters)
+- [x] Fix Soft 404 issue on homepage — removed conflicting duplicate canonical tag and standardized all URLs to non-www
