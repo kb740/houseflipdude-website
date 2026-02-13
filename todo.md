@@ -118,3 +118,9 @@
 - [x] Fix /service-areas/marin (and all service area pages) not indexing in Google Search Console
 - [x] Add unique SEO titles and meta descriptions to ALL pages site-wide using useSEO hook
 - [x] Change all instances of phone number 415-686-2846 to 925-237-1335 across the entire site
+- [x] Add social media links to site footer (YouTube, Instagram, Facebook, LinkedIn, X/Twitter)
+- [x] Add social media icons to site header/top bar
+- [x] Add social links to About page
+- [x] Add social links to Contact page
+- [x] Add sameAs social profiles to schema.org markup for SEO
+- [x] Add Open Graph and social meta tags (Twitter Card with @HouseFlipDude)

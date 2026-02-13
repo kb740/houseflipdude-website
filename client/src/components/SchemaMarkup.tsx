@@ -45,6 +45,13 @@ const localBusinessSchema = {
   ],
   "slogan": "Investors Compete to Buy Your House for Top Dollar",
   "priceRange": "$$$$",
+  "sameAs": [
+    "https://www.youtube.com/@HouseFlipDude",
+    "https://www.instagram.com/houseflipdude/",
+    "https://www.facebook.com/profile.php?id=100014916131942",
+    "https://www.linkedin.com/in/houseflipdude/",
+    "https://x.com/HouseFlipDude"
+  ]
 };
 
 const faqSchema = {
