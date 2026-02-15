@@ -2,6 +2,7 @@ import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useSEO } from "@/hooks/useSEO";
+import FAQSchema from "@/components/FAQSchema";
 import {
   ClipboardList, Users, Handshake, Phone, Calendar,
   CheckCircle, ArrowRight, Shield, DollarSign, Clock
@@ -168,6 +169,7 @@ export default function HowItWorks() {
         </div>
       </section>
 
+      <FAQSchema faqs={faqs} />
       {/* FAQ */}
       <section className="py-16 lg:py-24 bg-muted/50">
         <div className="container max-w-3xl">

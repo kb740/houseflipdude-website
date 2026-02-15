@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { ArrowRight, AlertTriangle, CheckCircle, Clock, Shield, DollarSign, Home, Phone, Scale, Users } from "lucide-react";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { useSEO } from "@/hooks/useSEO";
+import FAQSchema from "@/components/FAQSchema";
 
 export default function Foreclosure() {
   useSEO({
@@ -228,6 +229,7 @@ export default function Foreclosure() {
         </div>
       </section>
 
+      <FAQSchema faqs={[{"q": "Can I sell my house if I've already received a Notice of Default?", "a": "Yes. You can sell your home at any point before the trustee sale. In fact, many homeowners sell after receiving a NOD. The key is acting quickly \u2014 our investors can close in as little as 7\u201314 days."}, {"q": "What if I owe more than my house is worth?", "a": "If you're underwater on your mortgage, we can help you explore a short sale, where the lender agrees to accept less than the full balance. Our team has experience negotiating with lenders to make this work."}, {"q": "Will selling stop the foreclosure?", "a": "Yes. Once the sale closes and the lender is paid off (or agrees to a short sale), the foreclosure process stops. You avoid the foreclosure on your credit report and walk away on your terms."}, {"q": "Are there really no fees?", "a": "Correct. There are zero fees to you as the homeowner. All closing costs, title fees, and any commissions are paid by the purchasing investor. The offer you accept is the amount you receive."}, {"q": "How is this different from those 'We Buy Houses' companies?", "a": "Most 'We Buy Houses' companies give you one lowball offer and hope you'll take it. With HouseFlipDude, multiple investors compete to buy your property, which drives the price up. Competition means a better deal for you."}, {"q": "What condition does my house need to be in?", "a": "Any condition. Our investors buy homes that need full renovations, homes with deferred maintenance, homes with code violations \u2014 it doesn't matter. You don't need to make any repairs or even clean."}]} />
       {/* FAQ */}
       <section className="py-16 lg:py-20 bg-background">
         <div className="container max-w-3xl">

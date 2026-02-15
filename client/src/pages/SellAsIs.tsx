@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { ArrowRight, CheckCircle, XCircle, Home, Phone, DollarSign, Wrench, Clock, Users, Zap, ShieldCheck } from "lucide-react";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { useSEO } from "@/hooks/useSEO";
+import FAQSchema from "@/components/FAQSchema";
 
 export default function SellAsIs() {
   useSEO({
@@ -249,6 +250,7 @@ export default function SellAsIs() {
         </div>
       </section>
 
+      <FAQSchema faqs={[{"q": "What does 'sell as-is' actually mean?", "a": "Selling as-is means you're selling the property in its current condition \u2014 no repairs, no updates, no cleaning. The buyer accepts the home exactly as it is. You don't need to fix anything, disclose anything beyond what California law requires, or make the home 'show-ready.'"}, {"q": "Will I get a fair price selling as-is?", "a": "With HouseFlipDude, yes \u2014 because multiple investors compete for your property. Unlike selling to a single 'We Buy Houses' company that gives you one lowball offer, our marketplace creates competition that drives the price up. You'll know you're getting the best price the market will bear."}, {"q": "Do I need to clean out the house?", "a": "No. You can leave furniture, personal belongings, junk \u2014 whatever you don't want. Our investors handle all cleanout and disposal after closing. Take what you want and leave the rest."}, {"q": "What if there are liens or title issues?", "a": "Our investors are experienced with complex title situations including tax liens, mechanic's liens, and title defects. We work with title companies to resolve these issues as part of the closing process."}, {"q": "How fast can you close?", "a": "As fast as 7\u201314 days for a straightforward sale. If you need more time \u2014 for example, to find your next home \u2014 you pick the closing date. There's no pressure to move faster than you're comfortable with."}, {"q": "Are there really zero fees?", "a": "Yes. There are no fees, no commissions, and no closing costs charged to you. The purchasing investor pays all costs. The offer amount is the amount you receive at closing."}]} />
       {/* FAQ */}
       <section className="py-16 lg:py-20 bg-muted/50">
         <div className="container max-w-3xl">

@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { useSEO } from "@/hooks/useSEO";
+import FAQSchema from "@/components/FAQSchema";
 
 export default function ForRealtors() {
   useSEO({
@@ -332,6 +333,7 @@ export default function ForRealtors() {
         </div>
       </section>
 
+      <FAQSchema faqs={[{"q": "Will you try to steal my client?", "a": "Absolutely not. If you have the listing, your listing agreement and commission are fully protected. We work with you, not around you. Our goal is to help you close the deal and look great to your client."}, {"q": "How is this different from selling to a wholesaler?", "a": "Wholesalers put a property under contract at a low price and then try to flip the contract to an investor for a profit. We're the opposite \u2014 we bring multiple investors to compete against each other, driving the price up. There's no assignment, no double escrow, and full transparency."}, {"q": "What commission do I earn on a referral?", "a": "For referrals (properties that aren't your listing), you earn a referral commission paid by the purchasing investor at closing. The exact amount depends on the deal, but we'll agree on terms upfront before anything moves forward."}, {"q": "How quickly can you get offers?", "a": "Typically within 48 hours of receiving the property details. Our investor network is active and ready to move. Closings can happen in as little as 7 days."}, {"q": "Do the investors pay cash?", "a": "Yes. Every investor in our network is vetted and has verified proof of funds. All offers are cash with no financing contingencies, which means no risk of the deal falling through due to a lender."}, {"q": "What areas do you cover?", "a": "We cover the entire greater San Francisco Bay Area \u2014 all 14 counties including San Francisco, Alameda, Contra Costa, Santa Clara, San Mateo, Marin, Sonoma, Napa, Solano, Sacramento, San Joaquin, Stanislaus, Santa Cruz, and Monterey."}]} />
       {/* FAQ */}
       <section className="py-16 lg:py-20 bg-muted/50">
         <div className="container max-w-3xl">

@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { ArrowRight, CheckCircle, Clock, Home, Phone, DollarSign, FileText, Users, Heart, Scale, Key } from "lucide-react";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { useSEO } from "@/hooks/useSEO";
+import FAQSchema from "@/components/FAQSchema";
 
 export default function InheritedHomes() {
   useSEO({
@@ -210,6 +211,7 @@ export default function InheritedHomes() {
         </div>
       </section>
 
+      <FAQSchema faqs={[{"q": "Do I need to go through probate before selling?", "a": "It depends on how the property was held. If the home is in a living trust, you can sell without probate. If probate is required, you can still start the process of finding buyers while probate is pending \u2014 so you're ready to close as soon as the court grants authority."}, {"q": "What if the house is in terrible condition?", "a": "That's perfectly fine. Our investors specialize in buying homes that need work \u2014 from cosmetic updates to full gut renovations. You don't need to make any repairs, clean out the property, or even remove personal belongings if you don't want to."}, {"q": "What about the tax implications of selling an inherited home?", "a": "Inherited properties receive a 'stepped-up basis' to the fair market value at the date of death. This means you may owe little or no capital gains tax if you sell relatively soon after inheriting. We always recommend consulting with a tax professional for your specific situation."}, {"q": "Can I sell if there are multiple heirs who disagree?", "a": "Yes. We've helped many families navigate this situation. Often, getting competing cash offers with clear numbers helps bring everyone to agreement. If needed, California law also provides legal mechanisms for partition sales."}, {"q": "How quickly can you close on an inherited property?", "a": "For trust sales and properties that don't require probate, we can close in as little as 7\u201314 days. For probate sales, we can have offers ready and close as soon as the court grants authority to sell."}, {"q": "Are there really no fees or commissions?", "a": "Correct. There are zero fees to you. All closing costs, title fees, and any commissions are paid by the purchasing investor. The offer you accept is the amount you walk away with."}]} />
       {/* FAQ */}
       <section className="py-16 lg:py-20 bg-background">
         <div className="container max-w-3xl">

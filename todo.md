@@ -124,3 +124,4 @@
 - [x] Add social links to Contact page
 - [x] Add sameAs social profiles to schema.org markup for SEO
 - [x] Add Open Graph and social meta tags (Twitter Card with @HouseFlipDude)
+- [x] Fix FAQ schema issue — removed global FAQPage schema from SchemaMarkup, added page-specific FAQSchema to 5 pages (HowItWorks, ForRealtors, Foreclosure, InheritedHomes, SellAsIs)
