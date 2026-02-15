@@ -126,3 +126,4 @@
 - [x] Add Open Graph and social meta tags (Twitter Card with @HouseFlipDude)
 - [x] Fix FAQ schema issue — removed global FAQPage schema from SchemaMarkup, added page-specific FAQSchema to 5 pages (HowItWorks, ForRealtors, Foreclosure, InheritedHomes, SellAsIs)
 - [x] Embed TheGreatBrainDrain.mp4 video on blog post /blog/the-great-brain-drain below title, above first section
+- [x] Update /what-is-a-wholesaler page title wording and color styling (Wholesaler red, Homeowner & Realtor green)

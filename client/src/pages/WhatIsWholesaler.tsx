@@ -19,9 +19,11 @@ export default function WhatIsWholesaler() {
             <ShieldAlert className="w-4 h-4" /> Consumer Awareness
           </div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
-            What Is a Real Estate <span className="text-red-600">Wholesaler</span>? <br className="hidden md:block" />
-            What Every Bay Area Homeowner Needs to Know
+            What Is a Real Estate <span className="text-red-600">Wholesaler</span>?
           </h1>
+          <p className="mt-3 text-xl md:text-2xl lg:text-3xl font-bold text-foreground leading-snug">
+            What Every Bay Area <span className="text-emerald-600">Homeowner</span> & <span className="text-emerald-600">Realtor</span> Needs to Know
+          </p>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-3xl">
             If someone has offered to buy your house with a "cash offer," there's a good chance they're not actually buying it at all. They may be a wholesaler — and understanding how wholesaling works could save you tens of thousands of dollars.
           </p>
