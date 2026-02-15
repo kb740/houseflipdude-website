@@ -19,7 +19,7 @@ const navLinks = [
   { href: "/about", label: "About" },
   { href: "/reviews", label: "Reviews" },
   { href: "/service-areas", label: "Service Areas" },
-  { href: "/what-is-a-wholesaler", label: "Wholesalers" },
+  { href: "/what-is-a-wholesaler", label: "Wholesaler Alert" },
   { href: "/for-realtors", label: "For Realtors" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
