@@ -10,6 +10,7 @@ interface BlogContent {
   category: string;
   date: string;
   readTime: string;
+  videoUrl?: string;
   sections: { heading: string; content: string }[];
 }
 
@@ -19,6 +20,7 @@ const blogContent: Record<string, BlogContent> = {
     category: "Industry Insights",
     date: "February 11, 2026",
     readTime: "10 min read",
+    videoUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/93737141/HIPwLJLjXqvHkoOP.mp4",
     sections: [
       { heading: "The Shift That Changed My Perspective", content: "There is something interesting happening at this moment in history, both intriguing and disturbing. Since the advent of AI, we've often heard the phrase \"train the model\" when companies like OpenAI describe how ChatGPT acquires knowledge and then presents information for our consumption. Until this week, I had thought of that mostly as the LLM crawling the Internet for articles and interfacing with humans in countless chats. It is impressive how LLMs have essentially digested all publicly available information on the internet and used it to help us answer basic and sometimes complex questions. It certainly feels useful, but for many of us, it feels like little more than an advanced version of search with better results and in a more convenient interface, i.e. conversational with voice output, etc. In terms of the general population, I think most would report that AI is intriguing and perhaps has been helpful in writing a grammatically correct email or letter of recommendation for a colleague, but that it hasn't fundamentally changed how they go about their day-to-day work." },
       { heading: "Why AI Hasn't Replaced Expertise — Yet", content: "It is becoming clearer to me that the above has been the case to date, because much of what we do in our daily work is difficult to describe, and in many cases, there is no written manual for how to do it. My job of identifying the right houses to renovate and sell profitably is as good an example as any, because it requires a fair bit of subtlety and nuance to make the right investment decisions. Ignoring tract homes where every 4th house is the same, most homes in the typical Bay Area neighborhood have some unique features, and that, combined with an assessment of the home's condition and potential resale value, makes for a complicated analysis and an uncertain outcome. Most in the business believe that the amount of uncertainty is directly correlated to the real estate investor's experience. I'd agree, as there are examples I see daily where an investor overpays for a home, or spends too much or too little on the renovation, and ultimately ends up losing money." },
@@ -254,6 +256,25 @@ export default function BlogPost() {
             </h1>
           </div>
         </section>
+
+        {/* Video */}
+        {post.videoUrl && (
+          <section className="pt-8 pb-4 bg-background">
+            <div className="container max-w-3xl">
+              <div className="rounded-xl overflow-hidden shadow-lg border border-border">
+                <video
+                  controls
+                  preload="metadata"
+                  className="w-full aspect-video bg-black"
+                  poster=""
+                >
+                  <source src={post.videoUrl} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Content */}
         <section className="py-12 lg:py-16 bg-background">
