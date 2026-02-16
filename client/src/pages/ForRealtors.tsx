@@ -90,6 +90,26 @@ export default function ForRealtors() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-12 lg:py-16 bg-background">
+        <div className="container max-w-4xl">
+          <div className="rounded-2xl overflow-hidden shadow-2xl border border-border">
+            <video
+              controls
+              preload="metadata"
+              className="w-full aspect-video bg-black"
+              poster=""
+            >
+              <source src="https://files.manuscdn.com/user_upload_by_module/session_file/93737141/SmkUemweIwySEyBY.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p className="text-center text-sm text-muted-foreground mt-4">
+            Watch: Three ways Bay Area Realtors partner with HouseFlipDude to get fixer listings sold fast.
+          </p>
+        </div>
+      </section>
+
       {/* Three Scenarios */}
       <section id="three-scenarios" className="py-16 lg:py-24 bg-background scroll-mt-20">
         <div className="container max-w-5xl">
