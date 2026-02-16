@@ -128,3 +128,4 @@
 - [x] Embed TheGreatBrainDrain.mp4 video on blog post /blog/the-great-brain-drain below title, above first section
 - [x] Update /what-is-a-wholesaler page title wording and color styling (Wholesaler red, Homeowner & Realtor green)
 - [x] Change nav menu label from 'Wholesalers' to 'Wholesaler Alert'
+- [x] Reshape /for-realtors page with 3 prioritized scenarios: (1) off-market listing, (2) referral opportunity, (3) stale MLS listing
