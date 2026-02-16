@@ -130,3 +130,6 @@
 - [x] Change nav menu label from 'Wholesalers' to 'Wholesaler Alert'
 - [x] Reshape /for-realtors page with 3 prioritized scenarios: (1) off-market listing, (2) referral opportunity, (3) stale MLS listing
 - [x] Embed Realtor@Desk.mp4 video near the top of /for-realtors page
+- [x] Set up 301 redirect: non-www → www (houseflipdude.com → www.houseflipdude.com)
+- [x] Set up 301 redirect: HTTP → HTTPS
+- [x] Create comprehensive backlink building strategy for Bay Area house buying business

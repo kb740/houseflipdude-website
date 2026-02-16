@@ -32,6 +32,29 @@ async function findAvailablePort(startPort: number = 3000): Promise<number> {
 async function startServer() {
   const app = express();
   const server = createServer(app);
+
+  // 301 Redirect: non-www → www and HTTP → HTTPS (production only)
+  // This ensures all traffic consolidates to https://www.houseflipdude.com
+  // preventing duplicate content issues flagged by SEO tools
+  if (process.env.NODE_ENV === "production") {
+    app.use((req, res, next) => {
+      const host = req.headers.host || "";
+      const proto = req.headers["x-forwarded-proto"] || req.protocol;
+
+      // Redirect non-www to www
+      if (host && !host.startsWith("www.") && host.includes("houseflipdude.com")) {
+        return res.redirect(301, `https://www.${host}${req.originalUrl}`);
+      }
+
+      // Redirect HTTP to HTTPS
+      if (proto === "http" && host.includes("houseflipdude.com")) {
+        return res.redirect(301, `https://${host}${req.originalUrl}`);
+      }
+
+      next();
+    });
+  }
+
   // Configure body parser with larger size limit for file uploads
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
