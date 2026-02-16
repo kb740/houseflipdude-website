@@ -42,7 +42,7 @@ export default function ForRealtors() {
                 Three Ways to <span className="text-primary">Partner</span> with HouseFlipDude
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                Whether you have an off-market fixer listing, heard of an upcoming listing that needs work from another Realtor in your office, or have a listing that's stalled on the MLS — we have a partnership model that works for you. Your clients get top dollar. You earn your commission. Reach out by form, text, or email.
+                Whether you have an off-market fixer listing, you heard of an upcoming listing that needs work from another Realtor in your office, or you have a listing that's stalled out on the MLS — we have a partnership model that works for you. Your clients get Top Dollar and you earn your commission. Reach out by phone, text, email or by completing the 60 Second form below.
               </p>
               <div className="flex flex-wrap gap-4 mt-8">
                 <a href="#three-scenarios">
