@@ -133,3 +133,4 @@
 - [x] Set up 301 redirect: non-www → www (houseflipdude.com → www.houseflipdude.com)
 - [x] Set up 301 redirect: HTTP → HTTPS
 - [x] Create comprehensive backlink building strategy for Bay Area house buying business
+- [x] Replace all instances of phone number 925-237-1335 with 925-588-7804 across entire site

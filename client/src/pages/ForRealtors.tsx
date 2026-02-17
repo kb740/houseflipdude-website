@@ -50,7 +50,7 @@ export default function ForRealtors() {
                     See How It Works <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </a>
-                <a href="tel:+19252371335">
+                <a href="tel:+19255887804">
                   <Button size="lg" variant="outline" className="font-bold text-lg px-8 py-6">
                     <Phone className="w-5 h-5 mr-2" /> Call or Text Us
                   </Button>
@@ -58,8 +58,8 @@ export default function ForRealtors() {
               </div>
               {/* Quick contact methods */}
               <div className="flex flex-wrap gap-6 mt-6 text-sm text-muted-foreground">
-                <a href="tel:+19252371335" className="flex items-center gap-1.5 hover:text-primary transition-colors">
-                  <MessageSquare className="w-4 h-4" /> Text: (925) 237-1335
+                <a href="tel:+19255887804" className="flex items-center gap-1.5 hover:text-primary transition-colors">
+                  <MessageSquare className="w-4 h-4" /> Text: (925) 588-7804
                 </a>
                 <a href="mailto:kb@houseflipdude.com" className="flex items-center gap-1.5 hover:text-primary transition-colors">
                   <Mail className="w-4 h-4" /> kb@houseflipdude.com
@@ -168,7 +168,7 @@ export default function ForRealtors() {
               <div className="bg-accent/50 rounded-xl p-6 mb-6">
                 <h4 className="font-bold text-foreground mb-3">How It Works:</h4>
                 <ol className="text-sm text-muted-foreground space-y-2">
-                  <li className="flex gap-3"><span className="font-bold text-primary text-base">1.</span> <span>Reach out to us — fill out the form below, send a text to (925) 237-1335, or email kb@houseflipdude.com with the property details and your listing info.</span></li>
+                  <li className="flex gap-3"><span className="font-bold text-primary text-base">1.</span> <span>Reach out to us — fill out the form below, send a text to (925) 588-7804, or email kb@houseflipdude.com with the property details and your listing info.</span></li>
                   <li className="flex gap-3"><span className="font-bold text-primary text-base">2.</span> <span>We present the property to our network of competing investors — no public marketing, no MLS exposure, total discretion.</span></li>
                   <li className="flex gap-3"><span className="font-bold text-primary text-base">3.</span> <span>You receive multiple cash offers within 48 hours. Your seller reviews them with you.</span></li>
                   <li className="flex gap-3"><span className="font-bold text-primary text-base">4.</span> <span>Your seller picks the best offer, you earn your full listing commission, and the deal closes on your seller's timeline — often in as little as 7-14 days.</span></li>
@@ -216,7 +216,7 @@ export default function ForRealtors() {
               <div className="bg-accent/50 rounded-xl p-6 mb-6">
                 <h4 className="font-bold text-foreground mb-3">How It Works:</h4>
                 <ol className="text-sm text-muted-foreground space-y-2">
-                  <li className="flex gap-3"><span className="font-bold text-secondary text-base">1.</span> <span>Tell us about the property and the homeowner — fill out the form, text us at (925) 237-1335, or email kb@houseflipdude.com.</span></li>
+                  <li className="flex gap-3"><span className="font-bold text-secondary text-base">1.</span> <span>Tell us about the property and the homeowner — fill out the form, text us at (925) 588-7804, or email kb@houseflipdude.com.</span></li>
                   <li className="flex gap-3"><span className="font-bold text-secondary text-base">2.</span> <span>We reach out to the homeowner, evaluate the property, and present competing investor offers.</span></li>
                   <li className="flex gap-3"><span className="font-bold text-secondary text-base">3.</span> <span>If the homeowner accepts an offer, one of our investors purchases the property.</span></li>
                   <li className="flex gap-3"><span className="font-bold text-secondary text-base">4.</span> <span>You receive your referral commission at closing — no extra work on your part.</span></li>
@@ -266,7 +266,7 @@ export default function ForRealtors() {
               <div className="bg-accent/50 rounded-xl p-6 mb-6">
                 <h4 className="font-bold text-foreground mb-3">How It Works:</h4>
                 <ol className="text-sm text-muted-foreground space-y-2">
-                  <li className="flex gap-3"><span className="font-bold text-amber-600 text-base">1.</span> <span>Send us your MLS listing details — fill out the form, text (925) 237-1335, or email kb@houseflipdude.com.</span></li>
+                  <li className="flex gap-3"><span className="font-bold text-amber-600 text-base">1.</span> <span>Send us your MLS listing details — fill out the form, text (925) 588-7804, or email kb@houseflipdude.com.</span></li>
                   <li className="flex gap-3"><span className="font-bold text-amber-600 text-base">2.</span> <span>We present the property to our investor network — buyers who may not have seen it on the MLS.</span></li>
                   <li className="flex gap-3"><span className="font-bold text-amber-600 text-base">3.</span> <span>You receive competing cash offers, often higher than what individual MLS buyers have offered.</span></li>
                   <li className="flex gap-3"><span className="font-bold text-amber-600 text-base">4.</span> <span>Your seller picks the best offer, you earn your full commission, and the deal closes fast.</span></li>
@@ -423,21 +423,21 @@ export default function ForRealtors() {
                     <p className="text-sm text-muted-foreground">Submit property details and we'll get back to you fast</p>
                   </div>
                 </a>
-                <a href="sms:+19252371335" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+                <a href="sms:+19255887804" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <MessageSquare className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-bold">Text Us: (925) 237-1335</p>
+                    <p className="font-bold">Text Us: (925) 588-7804</p>
                     <p className="text-sm text-muted-foreground">Quick and easy — send property info via text</p>
                   </div>
                 </a>
-                <a href="tel:+19252371335" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+                <a href="tel:+19255887804" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-bold">Call: (925) 237-1335</p>
+                    <p className="font-bold">Call: (925) 588-7804</p>
                     <p className="text-sm text-muted-foreground">Talk to us directly — no phone trees, no scripts</p>
                   </div>
                 </a>
@@ -520,9 +520,9 @@ export default function ForRealtors() {
             Stop settling for one lowball offer. Let our investor network compete to buy your client's property for top dollar — and earn your full commission.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+19252371335">
+            <a href="tel:+19255887804">
               <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold text-lg px-10 py-6 shadow-xl">
-                <Phone className="w-5 h-5 mr-2" /> Call (925) 237-1335
+                <Phone className="w-5 h-5 mr-2" /> Call (925) 588-7804
               </Button>
             </a>
             <a href="mailto:kb@houseflipdude.com">

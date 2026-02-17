@@ -161,7 +161,7 @@ export default function TermsOfService() {
             </p>
             <ul className="list-none space-y-1 mt-2">
               <li><strong>Email:</strong> kb@houseflipdude.com</li>
-              <li><strong>Phone:</strong> (925) 237-1335</li>
+              <li><strong>Phone:</strong> (925) 588-7804</li>
               <li><strong>Website:</strong> www.houseflipdude.com</li>
             </ul>
           </section>

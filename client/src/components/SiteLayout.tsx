@@ -53,8 +53,8 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             <a href="mailto:kb@houseflipdude.com" className="flex items-center gap-1 hover:underline">
               <Mail className="w-3 h-3" /> <span className="hidden sm:inline">kb@houseflipdude.com</span>
             </a>
-            <a href="tel:+19252371335" className="flex items-center gap-1 hover:underline">
-              <Phone className="w-3 h-3" /> <span>(925) 237-1335</span>
+            <a href="tel:+19255887804" className="flex items-center gap-1 hover:underline">
+              <Phone className="w-3 h-3" /> <span>(925) 588-7804</span>
             </a>
             <div className="hidden sm:flex items-center gap-2 ml-2 border-l border-primary-foreground/30 pl-3">
               {socialLinks.map(s => (
@@ -184,8 +184,8 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             <div>
               <h4 className="font-semibold text-background mb-4 text-sm uppercase tracking-wider">Contact Us</h4>
               <div className="flex flex-col gap-3 text-sm text-background/60">
-                <a href="tel:+19252371335" className="flex items-center gap-2 hover:text-primary transition-colors">
-                  <Phone className="w-4 h-4" /> (925) 237-1335
+                <a href="tel:+19255887804" className="flex items-center gap-2 hover:text-primary transition-colors">
+                  <Phone className="w-4 h-4" /> (925) 588-7804
                 </a>
                 <a href="mailto:kb@houseflipdude.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                   <Mail className="w-4 h-4" /> kb@houseflipdude.com
