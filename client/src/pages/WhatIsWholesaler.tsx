@@ -30,6 +30,17 @@ export default function WhatIsWholesaler() {
         </div>
       </section>
 
+      {/* FYI Alert Banner */}
+      <section className="py-0">
+        <div className="bg-red-600 text-white py-5 px-4">
+          <div className="container max-w-4xl">
+            <p className="text-base md:text-lg font-bold leading-relaxed text-center">
+              FYI...A Wholesaler just wants to get your deal in contract at any price so they then control it and can market it themselves. They then search to find end investors who would buy it and once they get a real offer, the wholesaler will attempt to renegotiate the price and terms in the underlying contract with the Seller! How much is the wholesaler making, many times you will never know!
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* What Is Wholesaling */}
       <section className="py-16 lg:py-20 bg-background">
         <div className="container max-w-3xl">

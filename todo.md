@@ -136,3 +136,4 @@
 - [x] Replace all instances of phone number 925-237-1335 with 925-588-7804 across entire site
 - [x] Update Wholesaler Alert page warning signs list with user's custom edits
 - [x] Apply final visual edits to Wholesaler Alert page: updated warning sign #6, updated 'Your Sale Can Fall Apart' heading and paragraph
+- [x] Add bold alert banner near top of Wholesaler Alert page with FYI wholesaler warning text
