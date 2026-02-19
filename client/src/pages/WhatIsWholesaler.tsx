@@ -107,8 +107,8 @@ export default function WhatIsWholesaler() {
             <div className="flex items-start gap-4 bg-red-50 border border-red-200 rounded-xl p-5">
               <XCircle className="w-6 h-6 text-red-600 shrink-0 mt-0.5" />
               <div>
-                <h3 className="font-bold text-foreground mb-1">Your Sale Can Fall Apart</h3>
-                <p className="text-muted-foreground">If the wholesaler can't find an investor willing to pay enough to make a profit, they'll often back out of the deal — leaving you back at square one after weeks of wasted time. Many wholesalers include escape clauses in their contracts that let them walk away with no consequences.</p>
+                <h3 className="font-bold text-foreground mb-1">Your Sale Can (likely will) Fall Apart</h3>
+                <p className="text-muted-foreground">If the wholesaler can't find an investor willing to pay more than the contract price so the wholesaler can make their profit, they'll first try to renegotiate the sale price and terms of the underlying contract with the seller.  If that doesn't work, they then back out of the deal — leaving you back at square one after weeks of wasted time. Nearly all wholesalers include escape clauses in their contracts that let them walk away with no consequences.  Even when offering non-contingent, they have a window of time to put up the Earnest Money Deposit (EMD) which acts like a built in contingency!</p>
               </div>
             </div>
             <div className="flex items-start gap-4 bg-red-50 border border-red-200 rounded-xl p-5">
@@ -136,7 +136,7 @@ export default function WhatIsWholesaler() {
               "They can't provide proof of funds to actually purchase the property.",
               "They say they want their contractors to walk the property, but then a number of other investors show up to take a look.",
               "You ask for addresses of other properties they have purchased and those addresses don't tie back to the entity making the offer.",
-              "They offer significantly below market value with no clear justification.",
+              "They offer at, or near, the asking price, seemingly ok with major issues like foundation repairs.  FYI...A Wholesaler just wants to get it in contract at any price so they control the deal.  They then search to find the end investor, and will attempt to renegotiate the price and terms with the Seller!",
               "They ask for an unusually long inspection or due diligence period and/or ask for more time.",
               "The buyer name on the contract is an LLC you can't find any information about and doesn't appear to own any properties.",
             ].map((flag, i) => (
