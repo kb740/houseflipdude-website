@@ -131,14 +131,14 @@ export default function WhatIsWholesaler() {
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              "They pressure you to sign quickly without giving you time to think",
-              "The contract has an \"assignment\" clause or mentions \"and/or assigns\"",
-              "They can't provide proof of funds to actually purchase your property",
-              "They won't tell you their company name or show you a real estate license",
-              "They found you through a handwritten mailer or bandit sign",
-              "They offer significantly below market value with no clear justification",
-              "They ask for an unusually long inspection or due diligence period",
-              "The buyer name on the contract is an LLC you can't find any information about",
+              "They offer non-contingent, but then don't put up the earnest money deposit and ask for more time!",
+              "The contract has an \"assignment\" clause or mentions \"and/or assigns.\"",
+              "They can't provide proof of funds to actually purchase the property.",
+              "They say they want their contractors to walk the property, but then a number of other investors show up to take a look.",
+              "You ask for addresses of other properties they have purchased and those addresses don't tie back to the entity making the offer.",
+              "They offer significantly below market value with no clear justification.",
+              "They ask for an unusually long inspection or due diligence period and/or ask for more time.",
+              "The buyer name on the contract is an LLC you can't find any information about and doesn't appear to own any properties.",
             ].map((flag, i) => (
               <div key={i} className="flex items-start gap-3 bg-card border border-border rounded-lg p-4">
                 <AlertTriangle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
