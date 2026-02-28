@@ -6,7 +6,7 @@ const localBusinessSchema = {
   "name": "HouseFlipDude",
   "alternateName": "House Flip Dude - Bay Area Cash Home Buyers",
   "description": "Multiple investors compete to buy your San Francisco Bay Area house for top dollar. Any condition, no fees, close on your timeline.",
-  "url": "https://houseflipdude.com",
+  "url": "https://www.houseflipdude.com",
   "telephone": "(925) 588-7804",
   "email": "kb@houseflipdude.com",
   "founder": {
