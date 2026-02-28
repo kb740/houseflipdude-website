@@ -1,9 +1,9 @@
+import { SignInButton } from "@clerk/clerk-react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { getLoginUrl } from "@/const";
 import { trpc } from "@/lib/trpc";
 import { Loader2, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -132,7 +132,7 @@ export default function ProfilePage() {
       <div className="container py-20 text-center">
         <Shield className="w-16 h-16 text-muted-foreground/30 mx-auto mb-4" />
         <h1 className="text-2xl font-bold mb-2">Login Required</h1>
-        <a href={getLoginUrl()}><Button>Log In</Button></a>
+        <SignInButton mode="modal"><Button>Log In</Button></SignInButton>
       </div>
     );
   }

@@ -1,8 +1,8 @@
+import { SignInButton } from "@clerk/clerk-react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { trpc } from "@/lib/trpc";
-import { getLoginUrl } from "@/const";
 import { Loader2, Shield, Phone, Mail, MapPin, Calendar, Clock } from "lucide-react";
 import { toast } from "sonner";
 
@@ -55,9 +55,9 @@ export default function AdminLeads() {
         <Shield className="w-16 h-16 text-muted-foreground/30 mx-auto mb-4" />
         <h1 className="text-2xl font-bold text-foreground mb-2">Admin Access Required</h1>
         <p className="text-muted-foreground mb-6">Please log in to access the lead management dashboard.</p>
-        <a href={getLoginUrl()}>
+        <SignInButton mode="modal">
           <Button>Log In</Button>
-        </a>
+        </SignInButton>
       </div>
     );
   }

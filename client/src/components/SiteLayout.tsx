@@ -1,3 +1,4 @@
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
@@ -88,7 +89,15 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             ))}
           </nav>
 
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex items-center gap-3">
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+            <SignedOut>
+              <SignInButton mode="modal">
+                <Button variant="ghost" size="sm">Log In</Button>
+              </SignInButton>
+            </SignedOut>
             <Link href="/#get-offer">
               <Button size="sm" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold">
                 Get My Offers
@@ -118,6 +127,16 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
                   Get My Offers
                 </Button>
               </Link>
+              <SignedOut>
+                <SignInButton mode="modal">
+                  <Button variant="outline" className="w-full mt-1">Log In</Button>
+                </SignInButton>
+              </SignedOut>
+              <SignedIn>
+                <div className="flex justify-center mt-1">
+                  <UserButton />
+                </div>
+              </SignedIn>
             </nav>
           </div>
         )}

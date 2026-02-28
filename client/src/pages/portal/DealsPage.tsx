@@ -1,9 +1,9 @@
+import { SignInButton } from "@clerk/clerk-react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import DealCard from "@/components/portal/DealCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { getLoginUrl } from "@/const";
 import { trpc } from "@/lib/trpc";
 import { Loader2, Search, Shield } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -59,9 +59,9 @@ export default function DealsPage() {
         <Shield className="w-16 h-16 text-muted-foreground/30 mx-auto mb-4" />
         <h1 className="text-2xl font-bold text-foreground mb-2">Investor Portal</h1>
         <p className="text-muted-foreground mb-6">Please log in to access the investor deal portal.</p>
-        <a href={getLoginUrl()}>
+        <SignInButton mode="modal">
           <Button>Log In</Button>
-        </a>
+        </SignInButton>
       </div>
     );
   }
