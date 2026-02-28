@@ -1,0 +1,78 @@
+CREATE TABLE `dealAccess` (
+	`id` int AUTO_INCREMENT NOT NULL,
+	`dealId` int NOT NULL,
+	`userId` int NOT NULL,
+	`grantedAt` timestamp NOT NULL DEFAULT (now()),
+	CONSTRAINT `dealAccess_id` PRIMARY KEY(`id`)
+);
+--> statement-breakpoint
+CREATE TABLE `deals` (
+	`id` int AUTO_INCREMENT NOT NULL,
+	`address` varchar(255),
+	`apn` varchar(64),
+	`status` enum('new','active','under_contract','pending','closed','dead') NOT NULL DEFAULT 'new',
+	`listingPrice` decimal(15,2),
+	`redfinEst` decimal(15,2),
+	`estLow` decimal(15,2),
+	`estHigh` decimal(15,2),
+	`soldPrice` decimal(15,2),
+	`soldDate` varchar(32),
+	`pricePerSqft` decimal(10,2),
+	`hoa` decimal(10,2),
+	`beds` int,
+	`baths` decimal(5,1),
+	`sqft` int,
+	`lotSf` int,
+	`lotAcres` decimal(10,4),
+	`yearBuilt` int,
+	`propType` varchar(64),
+	`daysOnMkt` int,
+	`elemSchool` varchar(255),
+	`schoolUrl` varchar(512),
+	`flipUrl` varchar(512),
+	`buildUrl` varchar(512),
+	`flipCompData` text,
+	`buildCompData` text,
+	`flipAnalysis` text,
+	`buildAnalysis` text,
+	`aiCompAnalysis` text,
+	`emd` decimal(15,2),
+	`coeDate` varchar(32),
+	`titleCo` varchar(255),
+	`vacancy` varchar(64),
+	`access` varchar(255),
+	`photosUrl` varchar(512),
+	`contactName` varchar(255),
+	`contactEmail` varchar(320),
+	`contactPhone` varchar(30),
+	`sourceType` varchar(64),
+	`intakeUrl` varchar(512),
+	`rawIntake` text,
+	`processingStatus` varchar(64),
+	`sheetRowId` varchar(128),
+	`createdAt` timestamp NOT NULL DEFAULT (now()),
+	`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
+	CONSTRAINT `deals_id` PRIMARY KEY(`id`),
+	CONSTRAINT `deals_sheetRowId_unique` UNIQUE(`sheetRowId`)
+);
+--> statement-breakpoint
+CREATE TABLE `investorProfiles` (
+	`id` int AUTO_INCREMENT NOT NULL,
+	`userId` int NOT NULL,
+	`rehabCostPerSqft` decimal(10,2),
+	`targetProfitMargin` decimal(10,6),
+	`interestRate` decimal(10,6),
+	`loanPoints` decimal(10,6),
+	`loanTermMonths` int,
+	`holdingMonths` int,
+	`closingCostsPct` decimal(10,6),
+	`minPrice` decimal(15,2),
+	`maxPrice` decimal(15,2),
+	`createdAt` timestamp NOT NULL DEFAULT (now()),
+	`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
+	CONSTRAINT `investorProfiles_id` PRIMARY KEY(`id`),
+	CONSTRAINT `investorProfiles_userId_unique` UNIQUE(`userId`)
+);
+--> statement-breakpoint
+CREATE INDEX `deal_access_deal_id_idx` ON `dealAccess` (`dealId`);--> statement-breakpoint
+CREATE INDEX `deal_access_user_id_idx` ON `dealAccess` (`userId`);
