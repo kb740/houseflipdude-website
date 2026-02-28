@@ -137,3 +137,4 @@
 - [x] Update Wholesaler Alert page warning signs list with user's custom edits
 - [x] Apply final visual edits to Wholesaler Alert page: updated warning sign #6, updated 'Your Sale Can Fall Apart' heading and paragraph
 - [x] Add bold alert banner near top of Wholesaler Alert page with FYI wholesaler warning text
+- [x] Fix Select.Item empty string error in DealsPage.tsx — change 'All' option value to 'all', treat 'all' as undefined in query

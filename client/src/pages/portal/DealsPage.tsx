@@ -10,7 +10,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "wouter";
 
 const STATUS_OPTIONS = [
-  { value: "", label: "All Statuses" },
+  { value: "all", label: "All Statuses" },
   { value: "new", label: "New" },
   { value: "active", label: "Active" },
   { value: "under_contract", label: "Under Contract" },
@@ -24,7 +24,7 @@ export default function DealsPage() {
   const [, navigate] = useLocation();
   const [searchInput, setSearchInput] = useState("");
   const [search, setSearch] = useState("");
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState("all");
   const [page, setPage] = useState(1);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -40,7 +40,7 @@ export default function DealsPage() {
   }, [searchInput]);
 
   const { data, isLoading } = trpc.deals.list.useQuery(
-    { page, status: status || undefined, search: search || undefined },
+    { page, status: status === "all" ? undefined : status || undefined, search: search || undefined },
     { enabled: isAuthenticated }
   );
 
