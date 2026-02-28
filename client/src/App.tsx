@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch, useLocation } from "wouter";
+import { Redirect, Route, Switch, useLocation } from "wouter";
 import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -24,6 +24,10 @@ import TermsOfService from "./pages/TermsOfService";
 import Foreclosure from "./pages/Foreclosure";
 import InheritedHomes from "./pages/InheritedHomes";
 import SellAsIs from "./pages/SellAsIs";
+import DealsPage from "./pages/portal/DealsPage";
+import DealDetailPage from "./pages/portal/DealDetailPage";
+import AdminPage from "./pages/portal/AdminPage";
+import ProfilePage from "./pages/portal/ProfilePage";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -55,6 +59,11 @@ function Router() {
         <Route path="/admin/leads" component={AdminLeads} />
         <Route path="/privacy" component={PrivacyPolicy} />
         <Route path="/terms" component={TermsOfService} />
+        <Route path="/portal/deals/:id" component={DealDetailPage} />
+        <Route path="/portal/deals" component={DealsPage} />
+        <Route path="/portal/admin" component={AdminPage} />
+        <Route path="/portal/profile" component={ProfilePage} />
+        <Route path="/portal"><Redirect to="/portal/deals" /></Route>
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>

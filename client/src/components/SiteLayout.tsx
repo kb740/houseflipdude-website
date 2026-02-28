@@ -23,6 +23,7 @@ const navLinks = [
   { href: "/for-realtors", label: "For Realtors" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
+  { href: "/portal/deals", label: "Investor Portal" },
 ];
 
 function NavLink({ href, label, onClick }: { href: string; label: string; onClick?: () => void }) {
