@@ -216,7 +216,7 @@ export const dealsRouter = router({
       const updateData = toRecord({ processingStatus: fields.processingStatus ?? "pending", ...fields as Record<string, unknown> });
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      await (db.insert(deals) as any).values(insertData).onDuplicateKeyUpdate({ set: updateData });
+      await (db.insert(deals) as any).values(insertData).onConflictDoUpdate({ target: deals.sheetRowId, set: updateData });
       return { success: true };
     }),
 
@@ -312,7 +312,7 @@ export const dealsRouter = router({
       const updateData = toRecord(input as Record<string, unknown>);
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      await (db.insert(investorProfiles) as any).values(data).onDuplicateKeyUpdate({ set: updateData });
+      await (db.insert(investorProfiles) as any).values(data).onConflictDoUpdate({ target: investorProfiles.userId, set: updateData });
       return { success: true };
     }),
 
