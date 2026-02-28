@@ -58,27 +58,9 @@ async function startServer() {
   // Configure body parser with larger size limit for file uploads
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
-  // Clerk authentication middleware (reads CLERK_SECRET_KEY from env)
-  app.use(clerkMiddleware());
-  // Auth status endpoint — returns Clerk userId and public metadata
-  app.get("/api/auth/me", (req, res) => {
-    const { userId, sessionClaims } = getAuth(req);
-    res.json({
-      userId: userId ?? null,
-      metadata: (sessionClaims as Record<string, unknown>)?.publicMetadata ?? null,
-    });
-  });
-  // tRPC API
-  app.use(
-    "/api/trpc",
-    createExpressMiddleware({
-      router: appRouter,
-      createContext,
-    })
-  );
-  // Serve hand-crafted sitemap.xml and robots.txt before other middleware
-  // This ensures the production platform doesn't override with an auto-generated version
-  // Serve the renamed sitemap that bypasses the platform's auto-generated /sitemap.xml
+
+  // Serve static public files BEFORE any auth middleware so they are never
+  // blocked by Clerk errors (e.g. missing CLERK_SECRET_KEY in some envs).
   app.get("/sitemap-hfd.xml", (_req, res) => {
     const sitemapPath = process.env.NODE_ENV === "development"
       ? path.resolve(import.meta.dirname, "../../client/public/sitemap-hfd.xml")
@@ -102,6 +84,25 @@ async function startServer() {
       res.status(404).send("robots.txt not found");
     }
   });
+
+  // Clerk authentication middleware (reads CLERK_SECRET_KEY from env)
+  app.use(clerkMiddleware());
+  // Auth status endpoint — returns Clerk userId and public metadata
+  app.get("/api/auth/me", (req, res) => {
+    const { userId, sessionClaims } = getAuth(req);
+    res.json({
+      userId: userId ?? null,
+      metadata: (sessionClaims as Record<string, unknown>)?.publicMetadata ?? null,
+    });
+  });
+  // tRPC API
+  app.use(
+    "/api/trpc",
+    createExpressMiddleware({
+      router: appRouter,
+      createContext,
+    })
+  );
 
   // development mode uses Vite, production mode uses static files
   if (process.env.NODE_ENV === "development") {
