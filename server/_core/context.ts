@@ -24,6 +24,12 @@ export async function createContext(
         await upsertUser({ openId: userId, role: isAdmin ? "admin" : "user" });
         user = (await getUserByOpenId(userId)) ?? null;
       }
+      // Always honor ADMIN_USER_ID regardless of what is stored in the DB.
+      // This handles the case where the user was created before ADMIN_USER_ID
+      // was configured and therefore has role "user" in the database.
+      if (user && userId === process.env.ADMIN_USER_ID && user.role !== "admin") {
+        user = { ...user, role: "admin" };
+      }
     }
   } catch {
     user = null;
