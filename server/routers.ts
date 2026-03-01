@@ -15,6 +15,15 @@ const adminProcedure = protectedProcedure.use(({ ctx, next }) => {
 export const appRouter = router({
   system: systemRouter,
   deals: dealsRouter,
+  auth: router({
+    // Returns the server-determined role (from DB + ADMIN_USER_ID env var).
+    // The client reads this instead of Clerk publicMetadata so that admin
+    // access is controlled purely by the server-side env var.
+    me: publicProcedure.query(({ ctx }) => {
+      if (!ctx.user) return null;
+      return { id: ctx.user.id, role: ctx.user.role };
+    }),
+  }),
   leads: router({
     submit: publicProcedure
       .input(
