@@ -16,22 +16,27 @@ export async function createContext(
 
   try {
     const { userId } = getAuth(opts.req);
+    const adminEnvId = process.env.ADMIN_USER_ID;
+    console.log("[auth] clerkUserId:", JSON.stringify(userId));
+    console.log("[auth] ADMIN_USER_ID env:", JSON.stringify(adminEnvId));
+
     if (userId) {
       user = (await getUserByOpenId(userId)) ?? null;
       if (!user) {
         // First sign-in: create user record in DB
-        const isAdmin = userId === process.env.ADMIN_USER_ID;
+        const isAdmin = userId === adminEnvId?.trim();
         await upsertUser({ openId: userId, role: isAdmin ? "admin" : "user" });
         user = (await getUserByOpenId(userId)) ?? null;
       }
       // Always honor ADMIN_USER_ID regardless of what is stored in the DB.
-      // This handles the case where the user was created before ADMIN_USER_ID
-      // was configured and therefore has role "user" in the database.
-      if (user && userId === process.env.ADMIN_USER_ID && user.role !== "admin") {
+      // Trim the env var to guard against trailing whitespace/newlines from Railway.
+      if (user && userId === adminEnvId?.trim()) {
         user = { ...user, role: "admin" };
       }
+      console.log("[auth] user.role after context build:", user?.role);
     }
-  } catch {
+  } catch (err) {
+    console.error("[auth] createContext error:", err);
     user = null;
   }
 
