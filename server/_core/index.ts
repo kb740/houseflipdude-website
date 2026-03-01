@@ -34,19 +34,15 @@ async function startServer() {
   const server = createServer(app);
 
   // 301 Redirect: non-www → www and HTTP → HTTPS (production only)
-  // This ensures all traffic consolidates to https://www.houseflipdude.com
-  // preventing duplicate content issues flagged by SEO tools
   if (process.env.NODE_ENV === "production") {
     app.use((req, res, next) => {
       const host = req.headers.host || "";
       const proto = req.headers["x-forwarded-proto"] || req.protocol;
 
-      // Redirect non-www to www
       if (host && !host.startsWith("www.") && host.includes("houseflipdude.com")) {
         return res.redirect(301, `https://www.${host}${req.originalUrl}`);
       }
 
-      // Redirect HTTP to HTTPS
       if (proto === "http" && host.includes("houseflipdude.com")) {
         return res.redirect(301, `https://${host}${req.originalUrl}`);
       }
@@ -55,12 +51,12 @@ async function startServer() {
     });
   }
 
-  // Configure body parser with larger size limit for file uploads
+  // Body parsers
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
-  // Serve static public files BEFORE any auth middleware so they are never
-  // blocked by Clerk errors (e.g. missing CLERK_SECRET_KEY in some envs).
+  // Public static files — registered before any auth middleware so they
+  // are never blocked by Clerk errors (e.g. CLERK_SECRET_KEY not yet set).
   app.get("/sitemap-hfd.xml", (_req, res) => {
     const sitemapPath = process.env.NODE_ENV === "development"
       ? path.resolve(import.meta.dirname, "../../client/public/sitemap-hfd.xml")
@@ -85,26 +81,31 @@ async function startServer() {
     }
   });
 
-  // Clerk authentication middleware (reads CLERK_SECRET_KEY from env)
-  app.use(clerkMiddleware());
-  // Auth status endpoint — returns Clerk userId and public metadata
-  app.get("/api/auth/me", (req, res) => {
+  // API sub-router — Clerk middleware is scoped here so it NEVER runs for
+  // the SPA catch-all or static asset serving below.
+  const apiRouter = express.Router();
+  apiRouter.use(clerkMiddleware());
+
+  apiRouter.get("/auth/me", (req, res) => {
     const { userId, sessionClaims } = getAuth(req);
     res.json({
       userId: userId ?? null,
       metadata: (sessionClaims as Record<string, unknown>)?.publicMetadata ?? null,
     });
   });
-  // tRPC API
-  app.use(
-    "/api/trpc",
+
+  apiRouter.use(
+    "/trpc",
     createExpressMiddleware({
       router: appRouter,
       createContext,
     })
   );
 
-  // development mode uses Vite, production mode uses static files
+  app.use("/api", apiRouter);
+
+  // SPA serving — completely outside Clerk scope.
+  // In development Vite handles HMR; in production serve the built dist.
   if (process.env.NODE_ENV === "development") {
     await setupVite(app, server);
   } else {
